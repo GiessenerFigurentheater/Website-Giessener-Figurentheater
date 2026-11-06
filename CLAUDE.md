@@ -28,6 +28,10 @@ Texte in `[eckigen Klammern]` (JSON) bzw. `<mark class="todo">` (HTML) erscheine
   `http://localhost:8765` im Browser öffnen. Nicht `python3 -m http.server` nehmen – der Browser zeigt sonst
   alte Seiten aus dem Zwischenspeicher. Stylesheet/Skript tragen einen Versions-Stempel (`?v=…`).
 - Jede Änderung im Browser prüfen (Desktop 1280 px und Handy 375 px, kein seitliches Scrollen).
+- **Online (Vorschau seit 06.11.2026):** Repository `GiessenerFigurentheater/Website-Giessener-Figurentheater`,
+  Vorschau-Link https://giessenerfigurentheater.github.io/Website-Giessener-Figurentheater/ (Pages-Quelle: GitHub Actions).
+  Claude kann nicht selbst pushen (Anmeldung nur in GitHub Desktop). Nach Änderungen: Nutzer committet & klickt in
+  GitHub Desktop „Push origin“. Vor neuer Arbeit „Fetch/Pull origin“, falls im Admin-Bereich etwas geändert wurde.
 
 ## Stand (31.10.2026)
 Fertig: Startseite (Bildershow, Bewertungen, 3 Stücke als Vorschau), Termine & Tickets (Instagram-Rabatt,
