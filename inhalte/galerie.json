@@ -1,0 +1,52 @@
+[
+  {
+    "bild": "/assets/bilder/ricardo-sperlich-hinter-der-buehne.jpg",
+    "titel": "Hinter der Bühne",
+    "alt": "Ricardo Sperlich spielt hinter der Bühne eine Handpuppe mit Schiebermütze vor einem gemalten roten Holzhaus"
+  },
+  {
+    "bild": "/assets/bilder/buehnenbild-pettersson-findus.jpg",
+    "titel": "Handgemalte Bühnenbilder",
+    "alt": "Handgemaltes Bühnenbild mit rotem Holzhaus, davor zwei Theaterfiguren"
+  },
+  {
+    "bild": "/assets/bilder/figuren-furzipups-drachen.jpg",
+    "titel": "Furzipups, der Knatterdrache",
+    "alt": "Die Drachenfigur Furzipups in Nahaufnahme"
+  },
+  {
+    "bild": "/assets/bilder/puppenspiel-furzipups-weihnachten-pinguin.jpg",
+    "titel": "Furzipups – oh, du schöne Weihnachtszeit",
+    "alt": "Pinguin-Figur mit Kamera in einer weihnachtlichen Szene"
+  },
+  {
+    "bild": "https://www.giessener-figurentheater.de/wp-content/uploads/go-x/u/6942741a-7786-479d-ba8f-1f519a559c8c/image.jpg",
+    "titel": "Unsere Bühne",
+    "alt": "Puppentheaterbühne mit rotem Vorhang"
+  },
+  {
+    "bild": "https://www.giessener-figurentheater.de/wp-content/uploads/go-x/u/bb6ee93c-66df-415c-ae78-8c967be70833/image.png",
+    "titel": "Das Theaterzelt am Abend",
+    "alt": "Theaterzelt bei Sonnenuntergang"
+  },
+  {
+    "bild": "https://www.giessener-figurentheater.de/wp-content/uploads/go-x/u/765767c8-4e21-49e1-b7c9-84cfb40b2a18/image.jpg",
+    "titel": "Gastspiel im Kinopolis",
+    "alt": "Puppenbühne in einem Kinosaal"
+  },
+  {
+    "bild": "https://www.giessener-figurentheater.de/wp-content/uploads/go-x/u/3aef98a2-b7ec-4cee-9b13-895a16fd0fa8/image.jpg",
+    "titel": "Einkaufscenter Wetzlar",
+    "alt": "Puppentheater-Vorstellung im Einkaufscenter Wetzlar"
+  },
+  {
+    "bild": "https://www.giessener-figurentheater.de/wp-content/uploads/go-x/u/5802d8e0-3438-47ee-a086-4e73d0762b1a/image.jpg",
+    "titel": "Unsere Figuren",
+    "alt": "Gruppe von Puppentheater-Figuren"
+  },
+  {
+    "bild": "https://www.giessener-figurentheater.de/wp-content/uploads/go-x/u/222568cd-9b61-44f0-96a1-7e11f1b01c12/image.jpg",
+    "titel": "Winterliches Bühnenbild",
+    "alt": "Winterliches Bühnenbild mit Haus und Baum"
+  }
+]

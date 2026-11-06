@@ -1,0 +1,114 @@
+[
+  {
+    "stueck": "inhalte/stuecke/das-neinhorn.json",
+    "titel": "Das NEINhorn",
+    "beschreibung": "Das Puppenspiel nach dem Bilderbuch von Marc-Uwe Kling und Astrid Henn: Ein kleines Einhorn, das zu allem Nein sagt – live im Theaterzelt für Kinder und Familien.",
+    "ort": {
+      "name": "Theaterzelt auf dem Schützenplatz",
+      "strasse": "",
+      "plz": "",
+      "stadt": "Braunschweig"
+    },
+    "von": "2026-10-29",
+    "bis": "2026-11-14",
+    "zeiten": {
+      "Mo": "",
+      "Di": "",
+      "Mi": "",
+      "Do": "16:00",
+      "Fr": "16:00",
+      "Sa": "14:00",
+      "So": "11:00"
+    },
+    "ausfall": [],
+    "zusatz": [],
+    "preise": [
+      {
+        "name": "Erwachsene",
+        "preis": "14,00"
+      },
+      {
+        "name": "Kinder",
+        "preis": "12,00"
+      },
+      {
+        "name": "Menschen mit Beeinträchtigung",
+        "preis": "10,00"
+      }
+    ],
+    "status": "geplant",
+    "bild": ""
+  },
+  {
+    "stueck": "inhalte/stuecke/peppa-feiert-weihnachten.json",
+    "titel": "Peppa feiert Weihnachten",
+    "beschreibung": "Ein weihnachtliches Puppenspiel für Kinder ab 2 Jahren – live im Theaterzelt bei Möbelstadt Sommerlad in Gießen.",
+    "ort": {
+      "name": "Theaterzelt bei Möbelstadt Sommerlad",
+      "strasse": "",
+      "plz": "",
+      "stadt": "Gießen"
+    },
+    "von": "2026-11-20",
+    "bis": "2026-11-22",
+    "zeiten": {
+      "Mo": "",
+      "Di": "",
+      "Mi": "",
+      "Do": "",
+      "Fr": "16:00",
+      "Sa": "16:00",
+      "So": "11:00, 14:00"
+    },
+    "ausfall": [],
+    "zusatz": [],
+    "preise": [
+      {
+        "name": "pro Person",
+        "preis": "12,00"
+      },
+      {
+        "name": "Menschen mit Beeinträchtigung",
+        "preis": "10,00"
+      }
+    ],
+    "status": "geplant",
+    "bild": ""
+  },
+  {
+    "stueck": "inhalte/stuecke/furzipups-oh-du-schoene-weihnachtszeit.json",
+    "titel": "Furzipups – oh, du schöne Weihnachtszeit",
+    "beschreibung": "Das weihnachtliche Puppenspiel zu den Kinderbüchern von Kai Lüftner und Wiebke Rauers: Furzipups, der Knatterdrache, feiert Weihnachten – live im Theaterzelt bei Möbelstadt Sommerlad in Gießen.",
+    "ort": {
+      "name": "Theaterzelt bei Möbelstadt Sommerlad",
+      "strasse": "",
+      "plz": "",
+      "stadt": "Gießen"
+    },
+    "von": "2026-11-27",
+    "bis": "2026-11-29",
+    "zeiten": {
+      "Mo": "",
+      "Di": "",
+      "Mi": "",
+      "Do": "",
+      "Fr": "16:00",
+      "Sa": "16:00",
+      "So": "11:00, 14:00"
+    },
+    "ausfall": [],
+    "zusatz": [],
+    "preise": [
+      {
+        "name": "pro Person",
+        "preis": "12,00"
+      },
+      {
+        "name": "Menschen mit Beeinträchtigung",
+        "preis": "10,00"
+      }
+    ],
+    "status": "geplant",
+    "bild": ""
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "titel": "Der Grüffelo",
+  "sichtbar": true,
+  "reihenfolge": 4,
+  "vorlage": "nach dem Bilderbuch von Julia Donaldson und Axel Scheffler",
+  "tags": [
+    "Bilderbuch-Klassiker"
+  ],
+  "kurz": "Eine kleine Maus spaziert durch den tiefen, dunklen Wald – und erfindet zum Schutz vor Fuchs, Eule und Schlange ein Ungeheuer: den Grüffelo. Doch was, wenn es ihn wirklich gibt? [Textvorschlag]",
+  "alter": "ab 2 Jahren",
+  "dauer": "ca. 50 Minuten",
+  "zuschauer": "bis 300 Zuschauer",
+  "spielform": "Stabfiguren",
+  "inhalt": [
+    "[Inhaltsangabe: Worum geht es? 3–5 Sätze.]"
+  ],
+  "highlights": [
+    "[Was erwartet die Kinder?]"
+  ],
+  "paedagogik": [
+    "[Pädagogische Themen]"
+  ],
+  "varianten": [],
+  "formate": [],
+  "bilder": [
+    {
+      "src": "/assets/bilder/grueffelo-und-maus.jpg",
+      "alt": "Die Grüffelo-Figur sitzt mit der kleinen Maus auf der Puppenbühne vor einem gemalten Wald",
+      "text": "Der Grüffelo und die kleine Maus",
+      "fokus": "oben"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "titel": "Furzipups – oh, du schöne Weihnachtszeit",
+  "sichtbar": true,
+  "reihenfolge": 7,
+  "vorlage": "nach den Kinderbüchern von Kai Lüftner und Wiebke Rauers",
+  "tags": [
+    "Weihnachtsstück"
+  ],
+  "kurz": "Furzipups, der Knatterdrache, feiert Weihnachten – ein weihnachtliches Puppenspiel für die ganze Familie. [Textvorschlag]",
+  "alter": "ab 2 Jahren",
+  "dauer": "ca. 45 Minuten",
+  "zuschauer": "bis 300 Zuschauer",
+  "spielform": "Stabfiguren und Flachfiguren",
+  "inhalt": [
+    "[Inhaltsangabe: Worum geht es? 3–5 Sätze.]"
+  ],
+  "highlights": [
+    "[Was erwartet die Kinder?]"
+  ],
+  "paedagogik": [
+    "[Pädagogische Themen]"
+  ],
+  "varianten": [],
+  "formate": [
+    "Theaterzelt"
+  ],
+  "bilder": [
+    {
+      "src": "/assets/bilder/puppenspiel-furzipups-weihnachten-pinguin.jpg",
+      "alt": "Pinguin-Figur mit Kamera in einer weihnachtlichen Szene, dahinter Furzipups",
+      "text": "Szene aus „Furzipups – oh, du schöne Weihnachtszeit“"
+    }
+  ]
+}

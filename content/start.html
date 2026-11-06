@@ -1,0 +1,120 @@
+<!-- STARTSEITE: die wichtigsten Infos auf einen Blick, führt in die zwei Bereiche „Termine“ und „Veranstalter“.
+     Bilder: {{IMG_…}} wird beim Bauen durch die Bild-Adressen aus build.py ersetzt. -->
+
+<!-- BILDERSHOW: wechselt automatisch alle 6 Sekunden. Weitere Folie = weiteres <figure class="slide">. -->
+<section class="slider" aria-roledescription="Bildershow" aria-label="Einblicke in unser Puppentheater">
+  <figure class="slide is-active">
+    <img src="{{ROOT}}assets/bilder/buehnenbild-pettersson-findus.jpg" srcset="{{ROOT}}assets/bilder/klein/buehnenbild-pettersson-findus.jpg 1000w, {{ROOT}}assets/bilder/buehnenbild-pettersson-findus.jpg 2000w" sizes="100vw" alt="Handgemaltes Bühnenbild mit rotem Holzhaus, davor zwei Theaterfiguren">
+    <figcaption><span>Handgemalte, detailverliebte Bühnenbilder</span></figcaption>
+  </figure>
+  <figure class="slide">
+    <img src="{{ROOT}}assets/bilder/figuren-furzipups-drachen.jpg" srcset="{{ROOT}}assets/bilder/klein/figuren-furzipups-drachen.jpg 1000w, {{ROOT}}assets/bilder/figuren-furzipups-drachen.jpg 2000w" sizes="100vw" alt="Nahaufnahme der Drachenfigur Furzipups und eines zweiten Drachen" loading="lazy">
+    <figcaption><span>Professionelle Theaterfiguren</span></figcaption>
+  </figure>
+  <figure class="slide">
+    <img src="{{ROOT}}assets/bilder/puppenspiel-furzipups-weihnachten-pinguin.jpg" srcset="{{ROOT}}assets/bilder/klein/puppenspiel-furzipups-weihnachten-pinguin.jpg 1000w, {{ROOT}}assets/bilder/puppenspiel-furzipups-weihnachten-pinguin.jpg 2000w" sizes="100vw" alt="Pinguin-Figur mit Kamera in einer weihnachtlichen Szene, dahinter Furzipups" loading="lazy">
+    <figcaption><span>Leidenschaftliches Puppenspiel</span></figcaption>
+  </figure>
+  <div class="slider-dots" role="tablist" aria-label="Bild wählen">
+    <button role="tab" aria-selected="true" aria-label="Bild 1"></button>
+    <button role="tab" aria-selected="false" aria-label="Bild 2"></button>
+    <button role="tab" aria-selected="false" aria-label="Bild 3"></button>
+  </div>
+  <button class="slider-pause" aria-label="Bildershow anhalten">❚❚</button>
+  <small class="slider-credit">Fotos: Oesa</small>
+</section>
+
+<section class="intro">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Gießener Figurentheater</span>
+      <h1>Theater für das beste Publikum der Welt: <span class="hl">Kinder!</span></h1>
+      <p class="lead">Feinste Familienunterhaltung mit Niveau – in unserem Theaterzelt, in Stadthallen und Bürgerhäusern, in Kitas, Schulen und auf Events aller Art.</p>
+    </div>
+    <ul class="quality">
+      <li><b>Handgemalte Bühnenbilder</b><span>Jede Kulisse entsteht in liebevoller Handarbeit.</span></li>
+      <li><b>Professionelle Theaterfiguren</b><span>Hochwertig gefertigte Figuren mit viel Ausdruck.</span></li>
+      <li><b>Leidenschaftliches Puppenspiel</b><span>Mit Herz und Spielfreude erwecken wir die Figuren zum Leben.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap grid two" style="margin-top:0">
+    <a class="photo-card" href="{{ROOT}}termine.html">
+      <img src="{{IMG_ZELT}}" alt="Das Theaterzelt bei Sonnenuntergang" loading="lazy">
+      <span class="eyebrow">Für Familien</span>
+      <h2>Ins Theater gehen</h2>
+      <p>Unsere öffentlichen Vorstellungen im Theaterzelt und auf Gastspielreise – mit Terminen, Preisen und allen Ticket-Infos.</p>
+      <span class="btn yellow">Termine & Tickets</span>
+    </a>
+    <a class="photo-card" href="{{ROOT}}veranstalter.html">
+      <img src="{{IMG_EKZ}}" alt="Puppentheater-Vorstellung im Einkaufscenter Wetzlar" loading="lazy">
+      <span class="eyebrow">Für Kitas, Schulen & Veranstalter</span>
+      <h2>Uns buchen</h2>
+      <p>Wir kommen zu euch: in Kita und Schule, auf eure Bühne, mit dem Theaterzelt auf den Festplatz oder ins Einkaufszentrum.</p>
+      <span class="btn yellow">Infos für Veranstalter</span>
+    </a>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="eyebrow">Wann & Wo</span><h2>Demnächst bei uns</h2></div>
+      <a class="more" href="{{ROOT}}termine.html">Alle Termine →</a>
+    </div>
+    <div class="events-row">{{NAECHSTE_TERMINE}}</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <div><span class="eyebrow">Repertoire</span><h2>Unsere Stücke</h2></div>
+      <a class="more" href="{{ROOT}}stuecke/index.html">Alle Stücke →</a>
+    </div>
+    <p class="lead">Beliebte Bilderbuch-Helden und klassisches Kaspertheater – mit viel Liebe zum Detail auf die Bühne gebracht.</p>
+    {{STUECKE_VORSCHAU}}
+  </div>
+</section>
+
+<section class="alt" id="bewertungen">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="eyebrow">Referenzen</span><h2>Das sagt unser Publikum</h2></div>
+    </div>
+    {{BEWERTUNGEN}}
+  </div>
+</section>
+
+<section id="ueber-uns">
+  <div class="wrap split center">
+    <div>
+      <span class="eyebrow">Wer wir sind</span>
+      <h2>Patrizia & Ricardo Sperlich</h2>
+      <p class="lead">Wir stammen beide aus Künstlerfamilien. Mit dem Gießener Figurentheater leben wir unseren Traum und halten eine der ältesten Theaterformen mit modernen Konzepten lebendig.</p>
+      <p class="lead">Wir sind stets auf der Suche nach neuen, spannenden Geschichten, die wir mit viel Liebe zum Detail auf die Bühne bringen.</p>
+      <div class="btns"><a class="btn" href="{{ROOT}}ueber-uns.html">Mehr über uns</a></div>
+    </div>
+    <img class="portrait" src="{{IMG_TEAM}}" alt="Patrizia und Ricardo Sperlich vom Gießener Figurentheater" loading="lazy">
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <span class="eyebrow">Einblicke</span>
+    <h2>Mit Liebe zum Detail</h2>
+    {{GALERIE_VORSCHAU}}
+    <a class="more" href="{{ROOT}}galerie.html">Zur Galerie →</a>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="cta-band">
+      <div><h2>Puppentheater für eure Kita, Schule oder Veranstaltung?</h2><p>Wir beraten euch gern und machen ein passendes Angebot.</p></div>
+      <div class="btns"><a class="btn yellow" href="{{ROOT}}veranstalter.html#anfrage">Anfrage stellen</a><a class="btn ghost" href="tel:+491604625287">0160 / 46 25 287</a></div>
+    </div>
+  </div>
+</section>

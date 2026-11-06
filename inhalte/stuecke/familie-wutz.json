@@ -1,0 +1,35 @@
+{
+  "titel": "Familie Wutz",
+  "sichtbar": true,
+  "reihenfolge": 3,
+  "vorlage": "[Vorlage / Autor:in?]",
+  "tags": [
+    "Ab 2 Jahren"
+  ],
+  "kurz": "[Kurzbeschreibung in 1–2 Sätzen]",
+  "alter": "ab 2 Jahren",
+  "dauer": "ca. 45 Minuten",
+  "zuschauer": "bis 300 Zuschauer",
+  "spielform": "Stabfiguren",
+  "inhalt": [
+    "[Inhaltsangabe: Worum geht es? 3–5 Sätze.]"
+  ],
+  "highlights": [
+    "Schon für die Allerkleinsten ab 2 Jahren",
+    "[weitere Highlights]"
+  ],
+  "paedagogik": [
+    "[Themen, z. B. Familie, Alltag, Sprache]"
+  ],
+  "varianten": [],
+  "formate": [
+    "Theaterzelt"
+  ],
+  "bilder": [
+    {
+      "src": "/assets/bilder/familie-wutz-sonnenblumen.jpg",
+      "alt": "Eine Schweinchen-Figur im roten Kleid steht zwischen Sonnenblumen und einem Schmetterling vor einem gemalten gelben Haus",
+      "text": "Familie Wutz auf der Bühne"
+    }
+  ]
+}

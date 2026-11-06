@@ -1,0 +1,88 @@
+<!-- KULTURZELT: Zelte und Equipment zur Vermietung. Zelte & Equipment kommen aus inhalte/kulturzelt.json (Admin-Bereich „KULTURzelt“). -->
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Vermietung</span>
+      <h1><span class="hl">KULTURzelt</span> – Zelte &amp; Equipment für eure Veranstaltung</h1>
+      <p class="lead">Unsere Theaterzelte sind nicht nur für unsere eigenen Vorstellungen da: Ihr könnt sie mieten – für Stadtfeste, Kulturveranstaltungen, Firmen- und Familienfeiern. Auf Wunsch mit Bühne, Licht, Ton und allem, was dazugehört.</p>
+      <div class="btns">
+        <a class="btn" href="#mietanfrage">Mietanfrage</a>
+        <a class="btn ghost" href="#zelte">Unsere Zelte</a>
+      </div>
+    </div>
+    <div class="hero-media"><img src="{{IMG_ZELT}}" alt="Theaterzelt des Gießener Figurentheaters bei Sonnenuntergang"></div>
+  </div>
+</section>
+
+<section class="alt" id="einsatz">
+  <div class="wrap">
+    <span class="eyebrow">Einsatzmöglichkeiten</span>
+    <h2>Ein Zelt für viele Anlässe</h2>
+    <div class="grid">
+      <div class="box"><span class="num">01</span><h3>Kultur &amp; Theater</h3><p>Lesungen, Konzerte, Kleinkunst, Kindertheater – mit echter Theater-Atmosphäre.</p></div>
+      <div class="box"><span class="num">02</span><h3>Festivals, Stadt- &amp; Dorffeste</h3><p>Wetterfester Treffpunkt und Bühne auf Fest- und Marktplätzen.</p></div>
+      <div class="box"><span class="num">03</span><h3>Firmen- &amp; Vereinsfeiern</h3><p>Sommerfest, Weihnachtsfeier oder Jubiläum – mal ganz anders.</p></div>
+    </div>
+    <p class="idee">Du hast eine ganz andere Idee für das Zelt? <a href="#mietanfrage">Sprich uns einfach an!</a></p>
+  </div>
+</section>
+
+<section id="zelte">
+  <div class="wrap">
+    <span class="eyebrow">Unsere Zelte</span>
+    <h2>Zelte zur Miete</h2>
+    <p class="lead">Seit 2023 sind unsere neuen Theaterzelte im Einsatz. Hier findet ihr Größen, Platzangebot und Ausstattung auf einen Blick.</p>
+    {{ZELTE}}
+  </div>
+</section>
+
+<section class="alt" id="equipment">
+  <div class="wrap">
+    <span class="eyebrow">Equipment</span>
+    <h2>Alles, was dazugehört</h2>
+    <p class="lead">Folgendes bieten wir – nur in Kombination mit unseren Zelten – an:</p>
+    {{EQUIPMENT}}
+    <p class="idee">Ihr benötigt weiteres Equipment? <a href="#mietanfrage">Sprecht uns an!</a></p>
+  </div>
+</section>
+
+<section id="leistungen">
+  <div class="wrap">
+    <span class="eyebrow">Service</span>
+    <h2>So läuft die Miete ab</h2>
+    <ol class="steps">
+      <li><b>Anfrage</b><span>Formular unten oder Anruf – mit Zeitraum, Ort und Art der Veranstaltung.</span></li>
+      <li><b>Angebot</b><span>Ihr bekommt ein passendes Angebot inklusive Transport und Aufbau.</span></li>
+      <li><b>Aufbau</b><span>Wir liefern und bauen auf – ihr braucht nur die Fläche und einen Stromanschluss.</span></li>
+      <li><b>Abbau</b><span>Nach eurer Veranstaltung bauen wir wieder ab und räumen die Fläche.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="alt" id="mietanfrage">
+  <div class="wrap form-card" style="max-width:920px">
+    <span class="eyebrow">Unverbindlich</span>
+    <h2>Mietanfrage</h2>
+    <p class="lead">Erzählt uns kurz von eurer Veranstaltung – wir melden uns mit einem Angebot. Lieber direkt sprechen? <a href="tel:+491604625287">0160 / 46 25 287</a></p>
+    <form class="request" data-betreff="Mietanfrage KULTURzelt">
+      <fieldset class="full auswahl">
+        <legend>Was möchtet ihr mieten?</legend>
+        {{MIET_AUSWAHL}}
+      </fieldset>
+      <label>Art der Veranstaltung<input name="Veranstaltung" placeholder="z. B. Stadtfest, Firmenfeier"></label>
+      <label>Erwartete Gäste<input name="Gäste" placeholder="z. B. 150"></label>
+      <label>Von<input type="date" name="Von"></label>
+      <label>Bis<input type="date" name="Bis"></label>
+      <label class="full">Ort (Adresse / Gelände)<input name="Ort"></label>
+      <label>Name / Firma<input name="Einrichtung" required></label>
+      <label>Ansprechperson<input name="Ansprechperson" required></label>
+      <label>E-Mail<input type="email" name="E-Mail" required></label>
+      <label>Telefon<input type="tel" name="Telefon"></label>
+      <label class="full">Nachricht<textarea name="Nachricht" rows="4" placeholder="Untergrund, Stromanschluss, Wünsche …"></textarea></label>
+      <label class="full check"><input type="checkbox" name="Datenschutz" required> Ich bin einverstanden, dass meine Angaben zur Beantwortung der Anfrage verarbeitet werden (siehe <a href="{{ROOT}}datenschutz.html">Datenschutz</a>).</label>
+      <div class="full"><button class="btn" type="submit">Mietanfrage senden</button>
+        <p class="form-note">Vorerst öffnet sich euer E-Mail-Programm mit allen Angaben. Beim Live-Gang binden wir einen Formular-Dienst an.</p></div>
+    </form>
+  </div>
+</section>

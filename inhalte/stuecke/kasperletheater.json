@@ -1,0 +1,41 @@
+{
+  "titel": "Kasperletheater",
+  "sichtbar": true,
+  "reihenfolge": 6,
+  "vorlage": "Traditionelles Handpuppenspiel",
+  "tags": [
+    "Klassiker"
+  ],
+  "kurz": "Tri-tra-trullala: Kasper und seine Freunde erleben ein neues Abenteuer – mit viel Mitmachen, Rufen und Lachen.",
+  "alter": "ab 2 Jahren",
+  "dauer": "ca. 30–45 Minuten",
+  "zuschauer": "bis 300 Zuschauer",
+  "spielform": "Handpuppen",
+  "inhalt": [
+    "[Inhaltsangabe: Welches Abenteuer erlebt der Kasper? Gibt es mehrere Geschichten zur Auswahl?]"
+  ],
+  "highlights": [
+    "Das Theater, das schon Generationen begeistert",
+    "Viel Mitmachen: Die Kinder warnen, rufen und helfen",
+    "[Kompakter Aufbau – ideal für Kita, Center und Feste?]"
+  ],
+  "paedagogik": [
+    "Gut und Böse unterscheiden, Mut zeigen",
+    "Zuhören, Mitdenken, Mitsprechen",
+    "[weiteres Thema]"
+  ],
+  "varianten": [],
+  "formate": [
+    "Kita",
+    "Schule",
+    "Einkaufszentrum",
+    "Feste & Events"
+  ],
+  "bilder": [
+    {
+      "src": "/assets/bilder/kasper-und-grossmutter.jpg",
+      "alt": "Die Handpuppen Kasper und Großmutter auf der Kasperlebühne mit rotem Samtvorhang",
+      "text": "Kasper und die Großmutter"
+    }
+  ]
+}

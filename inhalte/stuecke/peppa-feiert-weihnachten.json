@@ -1,0 +1,36 @@
+{
+  "titel": "Peppa feiert Weihnachten",
+  "sichtbar": true,
+  "reihenfolge": 8,
+  "vorlage": "Für alle Fans der kultigen Schweinefamilie",
+  "tags": [
+    "Weihnachtsstück",
+    "Ab 2 Jahren"
+  ],
+  "kurz": "Ein weihnachtliches Puppenspiel für Kinder ab 2 Jahren. [Textvorschlag]",
+  "alter": "ab 2 Jahren",
+  "dauer": "ca. 45 Minuten",
+  "zuschauer": "bis 300 Zuschauer",
+  "spielform": "Stabfiguren",
+  "inhalt": [
+    "[Inhaltsangabe: Worum geht es? 3–5 Sätze.]"
+  ],
+  "highlights": [
+    "[Was erwartet die Kinder?]"
+  ],
+  "paedagogik": [
+    "[Pädagogische Themen]"
+  ],
+  "varianten": [],
+  "formate": [
+    "Theaterzelt"
+  ],
+  "bilder": [
+    {
+      "src": "/assets/bilder/peppa-feiert-weihnachten-titel.jpg",
+      "alt": "Schriftzug „Peppa feiert Weihnachten“ vor einem verschneiten Nachthimmel mit Weihnachtsbaum und Haus",
+      "text": "Peppa feiert Weihnachten",
+      "fokus": "unten"
+    }
+  ]
+}

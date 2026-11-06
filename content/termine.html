@@ -1,0 +1,94 @@
+<!-- TERMINE & TICKETS: für Familien / Publikum. Terminliste wird aus termine.json erzeugt. -->
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Wann & Wo</span>
+      <h1>Termine & <span class="hl">Tickets</span></h1>
+      <p class="lead">Alle öffentlichen Vorstellungen auf einen Blick. Tragt euch Termine mit einem Klick in den Kalender ein – oder abonniert gleich alle.</p>
+      <div class="btns">
+        <a class="btn" href="#termine">Zu den Terminen</a>
+        <a class="btn ghost" href="#tickets">Tickets & Eintritt</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      {{NAECHSTER_TERMIN_BILD}}
+      {{NAECHSTER_TERMIN_BADGE}}
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="termine">
+  <div class="wrap">
+    <span class="section-label">TERMINLISTE (automatisch · mit Schema.org-Daten für Google & KI)</span>
+    <div class="head">
+      <div><span class="eyebrow">Spielplan</span><h2>Kommende Vorstellungen</h2></div>
+      <a class="more" href="{{ROOT}}termine.ics">Kalender abonnieren →</a>
+    </div>
+    {{ALLE_TERMINE}}
+  </div>
+</section>
+
+<section id="tickets">
+  <div class="wrap">
+    <span class="section-label">TICKETS & EINTRITT</span>
+    <span class="eyebrow">Ticketinfos</span>
+    <h2>Tickets & Eintritt</h2>
+    <div class="grid two">
+      <div class="box">
+        <h3>Eintrittspreise</h3>
+        <div class="table-wrap" style="margin-top:10px"><table><tbody>
+          <tr><td>Erwachsene</td><td><b>14,– €</b></td></tr>
+          <tr><td>Kinder</td><td><b>12,– €</b></td></tr>
+          <tr><td>Menschen mit Beeinträchtigung</td><td><b>10,– €</b></td></tr>
+          <tr><td>Kinder unter 2 Jahren (ohne eigenen Sitzplatz)</td><td><b>frei</b></td></tr>
+        </tbody></table></div>
+        <p style="margin-top:10px">In einigen Gastspielorten können die Preise abweichen – die genauen Preise stehen beim jeweiligen Termin.</p>
+        <div class="promo">
+          <span class="promo-badge">−2 €</span>
+          <div>
+            <b>2 € Rabatt für unsere Instagram-Follower</b>
+            <p>Folgt uns auf Instagram und spart 2 € auf euer Ticket – einfach an der Kasse zeigen. Am besten gleich folgen!</p>
+            <a class="btn" href="https://www.instagram.com/giessenerfigurentheater/" target="_blank" rel="noopener">Jetzt auf Instagram folgen</a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <h3>So funktioniert's</h3>
+        <ul class="checklist">
+          <li>Tickets gibt es <b>30 Minuten vor Beginn direkt vor Ort</b></li>
+          <li><b>Nur Barzahlung</b> möglich</li>
+          <li>Freie Platzwahl</li>
+          <li>Bei „B“ oder „H“ im Ausweis ist eine Begleitperson frei</li>
+          <li>Reservierung für Gruppen ab 10 Personen (z. B. Kindergeburtstag, Kita-Gruppe) nach Absprache</li>
+          <li>Reservierung auch, wenn sie wegen einer Behinderung nötig ist (z. B. Rollstuhl, Sehbehinderung)</li>
+        </ul>
+        <p style="margin-top:12px">Gruppe anmelden: <a href="tel:+491604625287">0160 / 46 25 287</a> · <a href="mailto:info@giessener-figurentheater.de">info@giessener-figurentheater.de</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <span class="section-label">KALENDER-ABO</span>
+    <div class="cta-band">
+      <div><h2>Nie wieder eine Vorstellung verpassen</h2><p>Abonniert unseren Kalender in Apple Kalender, Google Kalender oder Outlook – neue Termine erscheinen dann automatisch.</p></div>
+      <div class="btns"><a class="btn yellow" href="{{ROOT}}termine.ics">Kalender abonnieren</a><a class="btn ghost" href="https://www.instagram.com/giessenerfigurentheater/">Instagram</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap" style="max-width:860px">
+    <span class="eyebrow">FAQ</span>
+    <span class="section-label">FAQ FÜR BESUCHER</span>
+    <h2>Häufige Fragen</h2>
+    <details class="faq"><summary>Kann ich Tickets vorab kaufen?</summary><p>Tickets gibt es immer 30 Minuten vor Beginn direkt vor Ort. Achtung: Es ist nur Barzahlung möglich. Es gilt freie Platzwahl. In einigen Gastspielorten wird ein Vorverkauf angeboten – Infos dazu findet ihr direkt beim jeweiligen Termin.</p></details>
+    <details class="faq"><summary>Brauchen Babys und Kleinkinder ein Ticket?</summary><p>Kinder unter 2 Jahren brauchen kein Ticket, haben dann aber keinen Anspruch auf einen eigenen Sitzplatz.</p></details>
+    <details class="faq"><summary>Ab welchem Alter sind die Stücke geeignet?</summary><p>Das hängt vom Stück ab – die Altersempfehlung steht auf der jeweiligen <a href="{{ROOT}}stuecke/index.html">Stückseite</a>.</p></details>
+    <details class="faq"><summary>Wie lange dauert eine Vorstellung?</summary><p>Das hängt vom Stück ab. Außerdem werden alle Stücke live gesprochen und die Kinder werden ins Geschehen mit einbezogen – deshalb kann die Spielzeit immer etwas variieren. Als Richtwert könnt ihr ca. 45 bis 50 Minuten einplanen.</p></details>
+    <details class="faq"><summary>Ist das Theaterzelt beheizt / barrierefrei?</summary><p>In der kalten Jahreszeit wird das Theaterzelt beheizt, sodass unsere Gäste es mollig warm haben. Das Zelt ist ebenerdig zugänglich, allerdings kann das je nach Standort variieren. Fragt einfach kurz bei uns nach, wenn ihr unsicher seid.</p></details>
+    <details class="faq"><summary>Gibt es Parkplätze?</summary><p>Das hängt immer vom Spielort ab. In der Regel sind Parkplätze vorhanden. Fragt gegebenenfalls nach, wenn ihr den jeweiligen Spielort noch nicht kennt.</p></details>
+  </div>
+</section>

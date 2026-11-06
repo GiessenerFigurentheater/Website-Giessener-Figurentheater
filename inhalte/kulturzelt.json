@@ -1,0 +1,70 @@
+{
+  "zelte": [
+    {
+      "name": "Das KULTURzelt",
+      "bilder": [
+        "https://www.giessener-figurentheater.de/wp-content/uploads/go-x/u/bb6ee93c-66df-415c-ae78-8c967be70833/image.png",
+        "/assets/bilder/kulturzelt-innen-feier.jpg",
+        "/assets/bilder/kulturzelt-sonnenuntergang-hafen.jpg",
+        "/assets/bilder/kulturzelt-aussen.jpg"
+      ],
+      "groesse": "219 m²",
+      "plaetze": "bis 250",
+      "flaeche": "24 × 28 m",
+      "beschreibung": "Ideal für Kulturreihen, Kleinkunst, Firmenfeiern u. v. m.",
+      "ausstattung": [
+        "Bestuhlung",
+        "Heizung",
+        "Beleuchtung"
+      ]
+    },
+    {
+      "name": "KULTURzeltchen",
+      "bilder": [
+        "/assets/bilder/kulturzeltchen-banner.jpg",
+        "/assets/bilder/kulturzeltchen-regenbogen.jpg",
+        "/assets/bilder/kulturzeltchen-innen-buehne.jpg",
+        "/assets/bilder/kulturzeltchen-aussen.jpg"
+      ],
+      "groesse": "150 m²",
+      "plaetze": "bis 150",
+      "flaeche": "22 × 19 m",
+      "beschreibung": "Ideal für Kleinkunst und kleine Events",
+      "ausstattung": [
+        "Bestuhlung",
+        "Heizung",
+        "Beleuchtung"
+      ]
+    }
+  ],
+  "equipment": [
+    {
+      "name": "Licht- & Tontechnik",
+      "text": ""
+    },
+    {
+      "name": "Bestuhlung",
+      "text": ""
+    },
+    {
+      "name": "Heizung",
+      "text": ""
+    },
+    {
+      "name": "Toilettenwagen",
+      "text": ""
+    },
+    {
+      "name": "Absperrgitter",
+      "text": ""
+    },
+    {
+      "name": "Starkstromkabel",
+      "text": ""
+    },
+    {
+      "name": "Kabelbrücken",
+      "text": ""
+    }
+  ]
+}

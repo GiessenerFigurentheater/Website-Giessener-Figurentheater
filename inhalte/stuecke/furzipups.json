@@ -1,0 +1,53 @@
+{
+  "titel": "Furzipups der Knatterdrache",
+  "sichtbar": true,
+  "reihenfolge": 1,
+  "vorlage": "nach den Kinderbüchern von Kai Lüftner und Wiebke Rauers",
+  "tags": [
+    "Neu"
+  ],
+  "kurz": "Erstmals live auf der Bühne: Der kleine Drache Furzipups kann kein Feuer speien – dafür knattert es bei ihm an ganz anderer Stelle.",
+  "alter": "ab 2 Jahren",
+  "dauer": "ca. 50 Minuten",
+  "zuschauer": "bis 300 Zuschauer",
+  "spielform": "Stabfiguren",
+  "inhalt": [
+    "[Inhaltsangabe: Worum geht es? 3–5 Sätze, gern mit einer kleinen Spannungsfrage am Ende.]"
+  ],
+  "highlights": [
+    "Bekannter Bilderbuch-Held – erstmals live als Puppenspiel",
+    "[Mitmachen: Wie werden die Kinder einbezogen?]",
+    "[Musik / Lieder?]"
+  ],
+  "paedagogik": [
+    "Anderssein und Selbstwert: Jeder kann etwas Besonderes",
+    "[weiteres Thema, z. B. Freundschaft, Mut]"
+  ],
+  "varianten": [],
+  "formate": [
+    "Theaterzelt",
+    "Große Bühne"
+  ],
+  "bilder": [
+    {
+      "src": "/assets/bilder/furzipups-auf-der-buehne.jpg",
+      "alt": "Die Stabfigur Furzipups steht auf der Puppenbühne vor einer gemalten Hügellandschaft",
+      "text": "Furzipups auf der Bühne"
+    },
+    {
+      "src": "/assets/bilder/furzipups-mit-chilischoten.jpg",
+      "alt": "Furzipups schnuppert an einer Schüssel mit roten Chilischoten, daneben zwei zottelige Figuren",
+      "text": "Furzipups und die Chilischoten"
+    },
+    {
+      "src": "/assets/bilder/figuren-furzipups-drachen.jpg",
+      "alt": "Die Drachenfigur Furzipups in Nahaufnahme, dahinter ein zweiter Drache",
+      "text": "Furzipups, der Knatterdrache"
+    },
+    {
+      "src": "/assets/bilder/furzipups-zottelige-figuren.jpg",
+      "alt": "Zwei zottelige Figuren mit langen Nasen aus „Furzipups der Knatterdrache“",
+      "text": "Weitere Figuren aus dem Stück"
+    }
+  ]
+}

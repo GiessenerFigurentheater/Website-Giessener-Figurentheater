@@ -1,0 +1,48 @@
+# Baut die Website und stellt sie auf GitHub Pages online:
+#  - bei jeder Änderung (z. B. nach dem Speichern im Admin-Bereich)
+#  - jede Nacht, damit vergangene Vorstellungen automatisch verschwinden
+#  - per Knopfdruck unter „Actions“ → „Website veröffentlichen“ → „Run workflow“
+name: Website veröffentlichen
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "30 1 * * *"   # täglich ca. 02:30 / 03:30 Uhr deutscher Zeit
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  bauen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Bildverkleinerung installieren
+        run: pip install pillow
+      - name: Website bauen
+        run: python build.py
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  veroeffentlichen:
+    needs: bauen
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

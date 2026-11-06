@@ -1,0 +1,32 @@
+{
+  "titel": "Furzipups und Lulu Lavazunge",
+  "sichtbar": true,
+  "reihenfolge": 5,
+  "vorlage": "nach den Kinderbüchern von Kai Lüftner und Wiebke Rauers [bitte prüfen]",
+  "tags": [
+    "Furzipups"
+  ],
+  "kurz": "[Kurzbeschreibung in 1–2 Sätzen]",
+  "alter": "ab 2 Jahren",
+  "dauer": "ca. 50 Minuten",
+  "zuschauer": "bis 300 Zuschauer",
+  "spielform": "Stabfiguren",
+  "inhalt": [
+    "[Inhaltsangabe: Worum geht es? 3–5 Sätze.]"
+  ],
+  "highlights": [
+    "[Was erwartet die Kinder?]"
+  ],
+  "paedagogik": [
+    "[Pädagogische Themen]"
+  ],
+  "varianten": [],
+  "formate": [],
+  "bilder": [
+    {
+      "src": "/assets/bilder/lulu-lavazunge.jpg",
+      "alt": "Nahaufnahme der roten Drachenfigur Lulu Lavazunge mit großen Augen und langen Wimpern",
+      "text": "Lulu Lavazunge"
+    }
+  ]
+}

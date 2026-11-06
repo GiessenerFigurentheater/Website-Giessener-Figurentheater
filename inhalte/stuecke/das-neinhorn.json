@@ -1,0 +1,40 @@
+{
+  "titel": "Das NEINhorn",
+  "sichtbar": true,
+  "reihenfolge": 2,
+  "vorlage": "nach dem Bilderbuch von Marc-Uwe Kling und Astrid Henn",
+  "tags": [
+    "Bilderbuch-Bestseller"
+  ],
+  "kurz": "Ein kleines Einhorn, das zu allem einfach NEIN sagt – ein Riesenspaß über Trotz, Freundschaft und Eigensinn.",
+  "alter": "ab 2 Jahren",
+  "dauer": "ca. 45 Minuten",
+  "zuschauer": "bis 300 Zuschauer",
+  "spielform": "Klappmaulpuppen, Stabfiguren und Flachfiguren",
+  "inhalt": [
+    "Im Herzwald wird ein kleines Einhorn geboren. Alle sind zuckersüß zu ihm – doch das Einhorn hat auf all das keine Lust und sagt einfach: NEIN!",
+    "[Wie geht es in eurer Inszenierung weiter? Wen trifft das NEINhorn, was erleben die Kinder?]"
+  ],
+  "highlights": [
+    "Eines der beliebtesten Bilderbücher Deutschlands als Puppenspiel",
+    "[Mitmachen: Die Kinder rufen mit „NEIN!“ – stimmt das?]",
+    "[Musik / Lieder?]"
+  ],
+  "paedagogik": [
+    "Trotz und Selbstbehauptung: Nein sagen ist erlaubt",
+    "Freundschaft trotz Unterschieden",
+    "[weiteres Thema]"
+  ],
+  "varianten": [],
+  "formate": [
+    "Theaterzelt",
+    "Große Bühne"
+  ],
+  "bilder": [
+    {
+      "src": "/assets/bilder/neinhorn-im-herzwald.jpg",
+      "alt": "Die Figur des NEINhorns sitzt auf der Puppenbühne vor einem handgemalten Wald",
+      "text": "Das NEINhorn im Herzwald"
+    }
+  ]
+}
