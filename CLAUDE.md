@@ -35,11 +35,13 @@ Texte in `[eckigen Klammern]` (JSON) bzw. `<mark class="todo">` (HTML) erscheine
   Dateien direkt auf GitHub), nach geprüfter Änderung `git add` → `git commit` (deutsche Nachricht) → `git push`.
   Nach 1–2 Min. online; der Nutzer muss nichts tun.
 
-## Stand (31.10.2026)
+## Stand (06.11.2026)
 Fertig: Startseite (Bildershow, Bewertungen, 3 Stücke als Vorschau), Termine & Tickets (Instagram-Rabatt,
-FAQ), Gastspielseiten, Repertoire mit 8 Stücken, Galerie mit Vollbild, Über uns (Steckbriefe, Dank,
-Geschichte mit Zeitleiste 1970–2026), Veranstalterseite (Ablauf, Technik, Preise, Bewertungen, FAQ,
-Buchungsformular), Admin-Bereich vorbereitet, Vorverkaufs-Feld für Termine.
+FAQ, Kopfbild = Bild der nächsten Vorstellung), Gastspielseiten, Repertoire mit 8 Stücken (Kacheln wackeln beim
+Scrollen, auch auf der Startseite), Galerie mit Foto-Wand & Vollbild, Über uns (Steckbriefe, Dank, Geschichte mit
+Zeitleiste 1970–2026), KULTURzelt (2 Zelte mit Daten & Wisch-Bildershow, Equipment-Liste, Mietablauf, Mietanfrage –
+keine offenen Platzhalter), Veranstalterseite (Ablauf, Technik, Preise, Bewertungen, FAQ, Buchungsformular),
+Admin-Bereich vorbereitet. Vorschau online auf GitHub Pages (für Google gesperrt, `VORSCHAU = True`).
 
 ## Offene Punkte
 - **Veranstalterseite:** Technik & Platz (Maße, Strom, Auf-/Abbau für mobile Bühne, große Bühne, Zelt),
