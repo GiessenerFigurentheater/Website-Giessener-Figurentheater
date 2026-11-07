@@ -46,6 +46,22 @@ Bühne/Zelt, Bewertungen, Downloads, FAQ, Buchungsformular; keine Preise). Wisch
 Bewertungen und Galerie-Vollbild. Vorschau online auf GitHub Pages (für Google gesperrt, `VORSCHAU = True`).
 Nächster Schritt (laut Nutzer): Inhalte & Kurzbeschreibungen der einzelnen Stücke.
 
+## Fahrplan (Stand 07.11.2026)
+- **Ziel:** Website im Laufe der Woche ab 09.11.2026 live stellen (Domain giessener-figurentheater.de).
+- **08.11.2026 – zuerst daran erinnern:** Ricardo installiert Google Chrome + Erweiterung „Claude in Chrome“ und meldet
+  sich dort bei den Portalen an (Facebook, Eventfrog, kindaling-Partnerportal, ggf. meinestadt.de, rheinmain4family).
+- **08.11.2026 – Arbeit:** Inhalte & Kurzbeschreibungen der 8 Stücke (Inhalt, Highlights, Pädagogik). Muss vor dem
+  Verteilen der Termine fertig sein.
+- **Termine verteilen (nach dem Live-Gang):** Claude trägt Termine per Browser („Claude in Chrome“) auf den Portalen ein:
+  Ricardo meldet sich selbst an und löst Captchas, Claude füllt aus und schickt erst nach Ricardos OK ab.
+  Erster Test: ein kommender Termin auf meinestadt.de. Automatische Schnittstellen gibt es bei diesen Portalen nicht
+  (Recherche 07.11.); später evtl. Anfragen an Stadtmarketing Gießen (Tourismus-Hub Hessen), Kulturamt, Gießener Zeitung.
+  Idee „Termin teilen“-Seite (Texte/Bilder je Portal zum Kopieren) vorerst nur im Hinterkopf.
+- **Vor dem Live-Gang erledigen:** Stück-Inhalte · Veranstalter: Downloads (Dateien oder Bereich ausblenden) und
+  Referenzen-Zeile · Logo & alte Fotos von IONOS sichern (OK einholen – sonst fehlen sie nach dem Domain-Umzug) ·
+  Google Fonts selbst hosten · Formular-Dienst für Buchungs- und Mietanfrage · Impressum/Datenschutz prüfen lassen ·
+  Pages CMS verbinden & testen · Entwurfs-Banner entfernen + `VORSCHAU = False` · Domain bei IONOS auf GitHub Pages umstellen.
+
 ## Offene Punkte
 - **Veranstalterseite:** Technik & Platz fertig; Bereich „Preise“ (inkl. Abrechnung/Storno) am 07.11.2026 entfernt.
   Offen: weitere Spielorte (u. a. Rerik, Celle ergänzen), Downloads (Dateien fehlen).
