@@ -30,22 +30,25 @@ Texte in `[eckigen Klammern]` (JSON) bzw. `<mark class="todo">` (HTML) erscheine
 - Jede Änderung im Browser prüfen (Desktop 1280 px und Handy 375 px, kein seitliches Scrollen).
 - **Online (Vorschau seit 06.11.2026):** Repository `GiessenerFigurentheater/Website-Giessener-Figurentheater`,
   Vorschau-Link https://giessenerfigurentheater.github.io/Website-Giessener-Figurentheater/ (Pages-Quelle: GitHub Actions).
-  **Claude lädt Änderungen selbst hoch** (Wunsch des Nutzers): GitHub CLI liegt in `~/.local/bin/gh`, angemeldet als
-  GiessenerFigurentheater, Git nutzt es als Anmeldung. Ablauf: vor der Arbeit `git pull` (der Admin-Bereich ändert
-  Dateien direkt auf GitHub), nach geprüfter Änderung `git add` → `git commit` (deutsche Nachricht) → `git push`.
-  Nach 1–2 Min. online; der Nutzer muss nichts tun.
+  **Hochladen nur auf Ansage:** Claude pusht erst, wenn der Nutzer ausdrücklich sagt, dass hochgeladen werden soll
+  (Wunsch vom 07.11.2026). Änderungen bis dahin nur lokal bauen & in der Vorschau zeigen.
+  Technik: GitHub CLI liegt in `~/.local/bin/gh`, angemeldet als GiessenerFigurentheater, Git nutzt es als Anmeldung.
+  Ablauf: vor der Arbeit `git pull` (der Admin-Bereich ändert Dateien direkt auf GitHub); beim Hochladen
+  `git add` → `git commit` (deutsche Nachricht) → `git pull --rebase` → `git push`. Nach 1–2 Min. online.
 
-## Stand (06.11.2026)
-Fertig: Startseite (Bildershow, Bewertungen, 3 Stücke als Vorschau), Termine & Tickets (Instagram-Rabatt,
-FAQ, Kopfbild = Bild der nächsten Vorstellung), Gastspielseiten, Repertoire mit 8 Stücken (Kacheln wackeln beim
-Scrollen, auch auf der Startseite), Galerie mit Foto-Wand & Vollbild, Über uns (Steckbriefe, Dank, Geschichte mit
-Zeitleiste 1970–2026), KULTURzelt (2 Zelte mit Daten & Wisch-Bildershow, Equipment-Liste, Mietablauf, Mietanfrage –
-keine offenen Platzhalter), Veranstalterseite (Ablauf, Technik, Preise, Bewertungen, FAQ, Buchungsformular),
-Admin-Bereich vorbereitet. Vorschau online auf GitHub Pages (für Google gesperrt, `VORSCHAU = True`).
+## Stand (07.11.2026)
+Fertig: Startseite (blauer Foto-Samtvorhang mit Logo, öffnet sich beim Scrollen – Shutterstock-Bild 2731195765, gekauft,
+Original in ~/Downloads; Bildershow, Icons Pinsel/Maske/Herz, Bewertungen, 3 Stücke), Termine & Tickets (Kopfbild = nächste
+Vorstellung, FAQ, Instagram-Rabatt), Gastspielseiten, Repertoire mit 8 Stücken (Kacheln wackeln), Galerie mit Foto-Wand &
+Vollbild, Über uns (Steckbriefe, Dank, Geschichte mit Zeitleiste, „Unsere Haltung“), KULTURzelt (2 Zelte mit Wisch-Bildershow,
+Equipment, Mietablauf, Mietanfrage), Veranstalterseite (Ablauf in blauen Kästchen, Technik & Platz für mobile Bühne/große
+Bühne/Zelt, Bewertungen, Downloads, FAQ, Buchungsformular; keine Preise). Wischgesten auf Handy für Bildershow,
+Bewertungen und Galerie-Vollbild. Vorschau online auf GitHub Pages (für Google gesperrt, `VORSCHAU = True`).
+Nächster Schritt (laut Nutzer): Inhalte & Kurzbeschreibungen der einzelnen Stücke.
 
 ## Offene Punkte
-- **Veranstalterseite:** Technik & Platz (Maße, Strom, Auf-/Abbau für mobile Bühne, große Bühne, Zelt),
-  Preise & Leistungen, MwSt./KSK, Storno, weitere Spielorte (u. a. Rerik, Celle ergänzen), Downloads (Dateien fehlen).
+- **Veranstalterseite:** Technik & Platz fertig; Bereich „Preise“ (inkl. Abrechnung/Storno) am 07.11.2026 entfernt.
+  Offen: weitere Spielorte (u. a. Rerik, Celle ergänzen), Downloads (Dateien fehlen).
 - **Stücke (Arbeit läuft, Stück für Stück):** Eckdaten (Alter, Dauer, Zuschauer, Spielform) + Titelfoto fertig bei
   Furzipups, NEINhorn, Familie Wutz, Grüffelo, Lulu Lavazunge. Noch offen: Kasperletheater, beide Weihnachtsstücke
   (Eckdaten; Kasperle & Peppa auch Foto). Bei allen fehlen Inhalt, Highlights, Pädagogik; Kurzbeschreibung bei Familie Wutz
@@ -53,8 +56,7 @@ Admin-Bereich vorbereitet. Vorschau online auf GitHub Pages (für Google gesperr
   Jede Stückseite hat den Kasten „Presse & Material“ (Feld `presse`) – Dateien fehlen noch.
   Hochkante Fotos: Feld `fokus` (oben/mitte/unten) beim Bild setzen.
   Offene Frage: Schlagwort „Neu“ bei „Furzipups der Knatterdrache“ (Premiere war 2024).
-- **Über uns:** „Was uns ausmacht“ (Bühnenbilder → Swen Richert; Figuren → Till de Kock / heutige Ateliers –
-  Nutzer wollte das später füllen), Theaterzelt-Details, „Unsere Haltung“.
+- **Über uns:** Theaterzelt-Details, „Unsere Haltung“ („Was uns ausmacht“ wurde am 07.11.2026 entfernt).
   Zeitleiste 2026 („In diesem Jahr …“) nach dem Jahreswechsel anpassen; Rabe-Socke-Untertitel prüfen.
 - **Spielorte:** Straße & PLZ der Zelt-Standorte Braunschweig und Gießen fehlen.
 - **Impressum / Datenschutz:** rechtlich prüfen lassen.

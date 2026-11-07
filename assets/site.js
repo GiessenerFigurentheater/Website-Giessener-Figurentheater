@@ -29,7 +29,21 @@ document.querySelectorAll("form.request").forEach(form => {
   });
 });
 
-// Bildershow: automatischer Wechsel, Punkte zum Springen, Pause-Knopf
+// Wischen auf Handy & Tablet: waagerechte Wischbewegung blättert vor bzw. zurück,
+// senkrechtes Wischen scrollt die Seite ganz normal weiter.
+const wischen = (el, zurueck, vor) => {
+  let x0 = null, y0 = 0;
+  el.style.touchAction = "pan-y";
+  el.addEventListener("touchstart", ev => { x0 = ev.touches[0].clientX; y0 = ev.touches[0].clientY; }, { passive: true });
+  el.addEventListener("touchend", ev => {
+    if (x0 === null) return;
+    const dx = ev.changedTouches[0].clientX - x0, dy = ev.changedTouches[0].clientY - y0;
+    x0 = null;
+    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.2) (dx < 0 ? vor : zurueck)();
+  }, { passive: true });
+};
+
+// Bildershow: automatischer Wechsel, Punkte zum Springen, Pause-Knopf, Wischen
 const slider = document.querySelector(".slider");
 if (slider) {
   const slides = [...slider.querySelectorAll(".slide")];
@@ -55,10 +69,11 @@ if (slider) {
   pauseBtn.addEventListener("click", () => setzePause(!pausiert));
   slider.addEventListener("mouseenter", () => clearInterval(timer));
   slider.addEventListener("mouseleave", starte);
+  wischen(slider, () => { zeige(aktuell - 1); starte(); }, () => { zeige(aktuell + 1); starte(); });
   setzePause(pausiert);
 }
 
-// Galerie: Foto groß anzeigen, mit Pfeiltasten blättern, Esc schließt
+// Galerie: Foto groß anzeigen, mit Pfeiltasten oder Wischen blättern, Esc schließt
 const lbLinks = [...document.querySelectorAll("a[data-lightbox]")];
 if (lbLinks.length) {
   const lb = document.createElement("div");
@@ -85,6 +100,7 @@ if (lbLinks.length) {
   lb.querySelector(".lb-prev").onclick = () => zeige(i - 1);
   lb.querySelector(".lb-next").onclick = () => zeige(i + 1);
   lb.addEventListener("click", ev => { if (ev.target === lb) lb.hidden = true; });
+  wischen(lb, () => zeige(i - 1), () => zeige(i + 1));
   document.addEventListener("keydown", ev => {
     if (lb.hidden) return;
     if (ev.key === "Escape") lb.hidden = true;
@@ -93,7 +109,7 @@ if (lbLinks.length) {
   });
 }
 
-// Google-Bewertungen: wechseln alle 8 Sekunden, Pfeile und Punkte zum Blättern
+// Google-Bewertungen: wechseln alle 8 Sekunden, Pfeile, Punkte und Wischen zum Blättern
 const reviewBox = document.querySelector(".review-slider");
 if (reviewBox) {
   const items = [...reviewBox.querySelectorAll(".review")];
@@ -111,6 +127,7 @@ if (reviewBox) {
   dots.forEach((d, k) => d.addEventListener("click", () => { zeige(k); los(); }));
   reviewBox.addEventListener("mouseenter", () => clearInterval(t));
   reviewBox.addEventListener("mouseleave", los);
+  wischen(reviewBox, () => { zeige(n - 1); los(); }, () => { zeige(n + 1); los(); });
   los();
 }
 
