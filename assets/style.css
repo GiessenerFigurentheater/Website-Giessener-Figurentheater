@@ -546,3 +546,49 @@ form.request fieldset.auswahl .check{font-weight:600;color:var(--ink)}
   .plays.bereit .play,.plays.bereit .play.sichtbar{opacity:1;transform:none;animation:none}
   .play:hover img{transform:none}
 }
+
+/* STARTSEITE: Samtvorhang vor der Bildershow – öffnet sich beim Scrollen (site.js setzt --auf von 0 bis 1).
+   Nur mit JavaScript und ohne „Bewegung reduzieren“; sonst bleibt die Bildershow wie gewohnt sichtbar. */
+.vorhang{display:none}
+@media (prefers-reduced-motion:no-preference){
+  .js .vorhang-buehne{height:calc(200svh - var(--kopf,72px));--auf:0}
+  .js .vorhang-buehne .slider{position:sticky;top:var(--kopf,72px);height:calc(100svh - var(--kopf,72px));min-height:0}
+  .js .vorhang{display:block;position:absolute;inset:0;z-index:5;overflow:hidden;pointer-events:none}
+}
+/* Samt: dunkles Blau, Falten als Licht- und Schattenstreifen, feines Rauschen für die samtige Oberfläche */
+.vorhang-teil,.vorhang-blende{
+  background-color:#0e2c70;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+    linear-gradient(180deg,rgba(120,170,255,.16),rgba(0,0,0,0) 28%,rgba(0,0,0,0) 62%,rgba(0,0,20,.55)),
+    repeating-linear-gradient(90deg,rgba(0,6,30,.62) 0,rgba(0,6,30,.2) 16px,rgba(90,140,255,.14) 34px,rgba(150,190,255,.3) 41px,rgba(90,140,255,.12) 50px,rgba(0,6,30,.28) 68px,rgba(0,6,30,.62) 84px),
+    linear-gradient(180deg,#1d4fb4,#0b2361)}
+.vorhang-teil{position:absolute;top:0;bottom:0;width:51%;will-change:transform,clip-path}
+.vorhang-teil.links{left:0;transform-origin:0 50%;
+  transform:translateX(calc(var(--auf)*-88%)) scaleX(calc(1 - var(--auf)*.55));
+  clip-path:polygon(0 0,100% 0,calc(100% - var(--auf)*42%) 100%,0 100%)}
+.vorhang-teil.rechts{right:0;transform-origin:100% 50%;
+  transform:translateX(calc(var(--auf)*88%)) scaleX(calc(1 - var(--auf)*.55));
+  clip-path:polygon(0 0,100% 0,100% 100%,calc(var(--auf)*42%) 100%)}
+/* Schatten an der Mittelnaht */
+.vorhang-teil.links::after,.vorhang-teil.rechts::after{content:"";position:absolute;top:0;bottom:0;width:60px}
+.vorhang-teil.links::after{right:0;background:linear-gradient(90deg,transparent,rgba(0,5,25,.55))}
+.vorhang-teil.rechts::after{left:0;background:linear-gradient(270deg,transparent,rgba(0,5,25,.55))}
+/* Querbehang oben mit gewellter Unterkante und goldener Borte */
+.vorhang-blende{position:absolute;left:-2%;right:-2%;top:0;height:clamp(54px,10vh,96px);
+  background-size:auto,auto,48px 100%,auto;
+  --bogen:clamp(18px,3vh,30px);
+  -webkit-mask:linear-gradient(#000,#000) 0 0/100% calc(100% - var(--bogen)) no-repeat,radial-gradient(50% 100% at 50% 0,#000 97%,transparent) 0 100%/clamp(90px,12vw,150px) var(--bogen) repeat-x;
+  mask:linear-gradient(#000,#000) 0 0/100% calc(100% - var(--bogen)) no-repeat,radial-gradient(50% 100% at 50% 0,#000 97%,transparent) 0 100%/clamp(90px,12vw,150px) var(--bogen) repeat-x;
+  transform:translateY(calc(var(--auf)*-110%))}
+.vorhang-blende::after{content:"";position:absolute;left:0;right:0;bottom:calc(var(--bogen) - 2px);height:4px;background:linear-gradient(90deg,#c99a2e,#ffd86b,#c99a2e);opacity:.9}
+.vorhang-blende::before{content:"";position:absolute;left:0;right:0;bottom:0;height:var(--bogen);background:linear-gradient(180deg,rgba(0,0,20,.35),rgba(0,0,0,0) 50%,rgba(0,0,20,.5))}
+/* Lichtkegel und Logo */
+.vorhang::before{content:"";position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse 46% 40% at 50% 46%,rgba(255,224,150,.32),transparent 70%);opacity:calc(1 - var(--auf)*1.8)}
+.vorhang-logo{position:absolute;z-index:2;left:50%;top:46%;width:min(78vw,640px);height:auto;
+  transform:translate(-50%,-50%) translateY(calc(var(--auf)*-75vh));opacity:calc(1 - var(--auf)*1.4);
+  filter:drop-shadow(0 4px 2px rgba(0,0,30,.6)) drop-shadow(0 14px 30px rgba(0,0,20,.55))}
+.vorhang-tipp{position:absolute;z-index:2;left:50%;bottom:clamp(24px,6vh,56px);transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:4px;
+  color:#ffe7a3;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem;text-shadow:0 2px 10px rgba(0,0,0,.6);opacity:calc(1 - var(--auf)*4)}
+.vorhang-tipp span{font-size:1.3rem;animation:tipp 1.6s ease-in-out infinite}
+@keyframes tipp{50%{transform:translateY(6px)}}

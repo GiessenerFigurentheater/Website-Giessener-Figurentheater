@@ -665,6 +665,7 @@ def layout(path, title, description, body, ld, bild=None):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">{'<meta name="robots" content="noindex, nofollow">' if VORSCHAU else ""}
+<script>document.documentElement.classList.add("js")</script>
 <title>{e(title)}</title>
 <meta name="description" content="{e(description)}">
 <link rel="canonical" href="{site}/{path if path != "index.html" else ""}">
@@ -828,6 +829,7 @@ def content(name, root):
         "NAECHSTER_TERMIN_BADGE": naechster_termin_badge(root),
         "NAECHSTER_TERMIN_BILD": naechster_termin_bild(root),
         "ROOT": root,
+        "LOGO": LOGO,
         "NAECHSTE_TERMINE": termin_liste(serien[:3], root, compact=True),
         "ALLE_TERMINE": termin_liste(serien, root),
         "STUECKE_KARTEN": stueck_karten(root),

@@ -1,7 +1,9 @@
 <!-- STARTSEITE: die wichtigsten Infos auf einen Blick, führt in die zwei Bereiche „Termine“ und „Veranstalter“.
      Bilder: {{IMG_…}} wird beim Bauen durch die Bild-Adressen aus build.py ersetzt. -->
 
-<!-- BILDERSHOW: wechselt automatisch alle 6 Sekunden. Weitere Folie = weiteres <figure class="slide">. -->
+<!-- VORHANG & BILDERSHOW: Ein blauer Samtvorhang mit Logo verdeckt anfangs die Bildershow und öffnet sich beim Scrollen
+     (Steuerung in site.js). Die Bildershow wechselt automatisch alle 6 Sekunden. Weitere Folie = weiteres <figure class="slide">. -->
+<div class="vorhang-buehne">
 <section class="slider" aria-roledescription="Bildershow" aria-label="Einblicke in unser Puppentheater">
   <figure class="slide is-active">
     <img src="{{ROOT}}assets/bilder/buehnenbild-pettersson-findus.jpg" srcset="{{ROOT}}assets/bilder/klein/buehnenbild-pettersson-findus.jpg 1000w, {{ROOT}}assets/bilder/buehnenbild-pettersson-findus.jpg 2000w" sizes="100vw" alt="Handgemaltes Bühnenbild mit rotem Holzhaus, davor zwei Theaterfiguren">
@@ -22,7 +24,15 @@
   </div>
   <button class="slider-pause" aria-label="Bildershow anhalten">❚❚</button>
   <small class="slider-credit">Fotos: Oesa</small>
+  <div class="vorhang" aria-hidden="true">
+    <div class="vorhang-teil links"></div>
+    <div class="vorhang-teil rechts"></div>
+    <div class="vorhang-blende"></div>
+    <img class="vorhang-logo" src="{{LOGO}}" alt="">
+    <span class="vorhang-tipp">Vorhang auf<span>↓</span></span>
+  </div>
 </section>
+</div>
 
 <section class="intro">
   <div class="wrap hero-grid">

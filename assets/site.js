@@ -157,3 +157,24 @@ document.querySelectorAll(".karussell").forEach(k => {
   spur.addEventListener("scroll", () => requestAnimationFrame(markiere), { passive: true });
   markiere();
 });
+
+// Startseite: Samtvorhang öffnet sich beim Scrollen. --auf läuft von 0 (zu) bis 1 (offen);
+// die Bildershow bleibt dabei stehen (sticky), bis der Vorhang ganz offen ist.
+const buehne = document.querySelector(".vorhang-buehne");
+if (buehne && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const kopf = document.querySelector("header.top");
+  const setzeKopf = () => document.documentElement.style.setProperty("--kopf", `${kopf ? kopf.offsetHeight : 0}px`);
+  let geplant = false;
+  const oeffne = () => {
+    geplant = false;
+    const weg = buehne.offsetHeight - buehne.querySelector(".slider").offsetHeight;
+    const roh = Math.min(Math.max(((kopf ? kopf.offsetHeight : 0) - buehne.getBoundingClientRect().top) / (weg * 0.8), 0), 1);
+    const auf = roh * roh * (3 - 2 * roh); // sanft beschleunigen und abbremsen
+    buehne.style.setProperty("--auf", auf.toFixed(4));
+  };
+  const plane = () => { if (!geplant) { geplant = true; requestAnimationFrame(oeffne); } };
+  setzeKopf();
+  oeffne();
+  addEventListener("scroll", plane, { passive: true });
+  addEventListener("resize", () => { setzeKopf(); plane(); });
+}
