@@ -3,25 +3,29 @@
   "sichtbar": true,
   "reihenfolge": 1,
   "vorlage": "nach den Kinderbüchern von Kai Lüftner und Wiebke Rauers",
+  "zitat": {
+    "text": "Nein, nicht viele Ungeheuer spucken, wenn es ernst wird, Feuer. Für Drachen ist es sogar Pflicht, die meisten tun es – einer nicht!",
+    "quelle": "aus „Furzipups, der Knatterdrache“ von Kai Lüftner"
+  },
   "tags": [
-    "Neu"
+    "Bilderbuch-Hit"
   ],
-  "kurz": "Erstmals live auf der Bühne: Der kleine Drache Furzipups kann kein Feuer speien – dafür knattert es bei ihm an ganz anderer Stelle.",
+  "kurz": "Der kleine Drache Furzipups kann kein Feuer speien. Dafür knattert es bei ihm an ganz anderer Stelle …",
   "alter": "ab 2 Jahren",
   "dauer": "ca. 50 Minuten",
   "zuschauer": "bis 300 Zuschauer",
   "spielform": "Stabfiguren",
   "inhalt": [
-    "[Inhaltsangabe: Worum geht es? 3–5 Sätze, gern mit einer kleinen Spannungsfrage am Ende.]"
+    "Furzipups hat einen großen Wunsch: Er möchte Feuer speien, genau wie alle anderen. Doch so sehr er sich anstrengt – heraus kommen nur ein paar Rauchwölkchen und ein dicker Pups! Also probiert Furzipups mit Hilfe seiner Freunde alles aus, um endlich Feuer zu speien: feurig-scharfe Chilischoten, Senf, Meerrettich, einen wilden Feuertanz und sogar ein Bad in heißer Lava. Als die Drachenherde ans Meer reist und er allein zu Hause Wache halten muss, entdeckt er etwas, das nur er kann. Ob das am Ende vielleicht sogar besser ist als Feuer?"
   ],
   "highlights": [
     "Bekannter Bilderbuch-Held – erstmals live als Puppenspiel",
-    "[Mitmachen: Wie werden die Kinder einbezogen?]",
-    "[Musik / Lieder?]"
+    "Mittendrin statt nur dabei: Die Figuren sprechen die Kinder immer wieder direkt an und beziehen sie aktiv ins Spiel ein"
   ],
   "paedagogik": [
     "Anderssein und Selbstwert: Jeder kann etwas Besonderes",
-    "[weiteres Thema, z. B. Freundschaft, Mut]"
+    "Stark gegen Gruppendruck: Niemand muss den Erwartungen anderer entsprechen – es zählt, wer man selbst ist",
+    "Sprachförderung durch Reime: Die gereimten Erzähltexte aus dem Buch schulen Sprachgefühl, Wortschatz und Lautbewusstsein"
   ],
   "varianten": [],
   "formate": [
@@ -49,5 +53,24 @@
       "alt": "Zwei zottelige Figuren mit langen Nasen aus „Furzipups der Knatterdrache“",
       "text": "Weitere Figuren aus dem Stück"
     }
-  ]
+  ],
+  "mitwirkende": [
+    {
+      "rolle": "Spiel",
+      "name": "Ricardo & Patrizia Sperlich"
+    },
+    {
+      "rolle": "Text",
+      "name": "Kai Lüftner (Erzähler) und Ricardo Sperlich (Dialoge)"
+    },
+    {
+      "rolle": "Figuren",
+      "name": "Norman Schneider"
+    },
+    {
+      "rolle": "Bühnenbild",
+      "name": "Bianca Böing"
+    }
+  ],
+  "premiere": "3. April 2024"
 }

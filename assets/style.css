@@ -612,3 +612,8 @@ form.request fieldset.auswahl .check{font-weight:600;color:var(--ink)}
 .steps li::before{color:var(--yellow)}
 .steps span{color:rgba(255,255,255,.82)}
 .steps .todo{color:var(--todo-ink)}
+
+/* Stückseite: Zitat (z. B. erster Satz aus dem Buch) mit Quelle, Liste der Mitwirkenden */
+.stueck-zitat{margin:18px 0 6px;background:#fff}
+.stueck-zitat cite{display:block;margin-top:8px;font-size:.8rem;font-style:normal;color:var(--muted)}
+.mitwirkende{margin-top:12px}

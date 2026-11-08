@@ -187,6 +187,13 @@ content:
         type: text
         required: true
         description: 1–2 Sätze für die Stück-Karte und Google.
+      - name: zitat
+        label: Zitat (optional)
+        type: object
+        description: Z. B. der erste Satz aus dem Buch – steht kursiv vor der Kurzbeschreibung.
+        fields:
+          - { name: text, label: Zitat (ohne Anführungszeichen), type: text }
+          - { name: quelle, label: Quelle, type: string, description: "z. B. „aus ‚Furzipups, der Knatterdrache‘ von Kai Lüftner“" }
       - name: alter
         label: Alter
         type: string
@@ -246,6 +253,18 @@ content:
         label: Pädagogischer Wert
         type: string
         list: true
+      - name: mitwirkende
+        label: Mitwirkende
+        type: object
+        list: true
+        description: Team der Inszenierung, z. B. Spiel, Text, Figuren, Bühnenbild.
+        fields:
+          - { name: rolle, label: Aufgabe, type: string }
+          - { name: name, label: Name(n), type: string }
+      - name: premiere
+        label: Uraufführung / Premiere
+        type: string
+        description: z. B. „3. April 2024“
       - name: varianten
         label: Varianten (z. B. Weihnachtsfassung)
         type: object

@@ -73,7 +73,8 @@ def vervollstaendige(daten, vorlage):
 
 STUECK_VORLAGE = {"titel": "", "vorlage": "", "kurz": "", "alter": "", "dauer": "", "zuschauer": "", "spielform": "",
                   "tags": [], "inhalt": [], "highlights": [], "paedagogik": [], "varianten": [], "formate": [], "bilder": [],
-                  "presse": {"pressetext": "", "pressefotos": "", "plakat": ""}}
+                  "presse": {"pressetext": "", "pressefotos": "", "plakat": ""},
+                  "zitat": {"text": "", "quelle": ""}, "mitwirkende": [], "premiere": ""}
 SERIE_VORLAGE = {"titel": "", "beschreibung": "", "ort": {"name": "", "strasse": "", "plz": "", "stadt": ""},
                  "zeiten": {t: "" for t in WOCHENTAGE}, "ausfall": [], "zusatz": [],
                  "preise": [], "bild": "", "status": "geplant", "vorverkauf": {"text": "", "link": ""}}
@@ -353,13 +354,42 @@ def bild_oder_platzhalter(st, root, label="Foto folgt", klein=True):
         return f'<img src="{e(bild_src(b, root, klein))}" alt="{e(b["alt"])}" loading="lazy"{fokus(b)}>'
     return f'<div class="ph">{label}<br>{e(st["titel"])}</div>'
 
+def kurz_html(st):
+    """Kurzbeschreibung für Karten: ein Zitat (z. B. der erste Satz aus dem Buch) steht kursiv davor."""
+    z = (st["zitat"].get("text") or "").strip()
+    return (f'<i>„{e(z)}“</i> – ' if z else "") + todo(st["kurz"])
+
+def kurz_text(st):
+    """Dasselbe als reiner Text, z. B. für die Google-Beschreibung."""
+    z = (st["zitat"].get("text") or "").strip()
+    return (f"„{z}“ – " if z else "") + st["kurz"]
+
+def zitat_block(st):
+    """Zitat mit Quellenangabe oben auf der Stückseite."""
+    z = (st["zitat"].get("text") or "").strip()
+    if not z:
+        return ""
+    q = (st["zitat"].get("quelle") or "").strip()
+    return (f'<blockquote class="person-quote stueck-zitat">„{e(z)}“'
+            + (f'<cite>{e(q)}</cite>' if q else "") + "</blockquote>")
+
+def mitwirkende_html(st):
+    """Team der Inszenierung (Spiel, Text, Figuren, Bühnenbild …) und Uraufführung als kleine Liste."""
+    zeilen = [(m.get("rolle", ""), m.get("name", "")) for m in st["mitwirkende"] if m.get("name")]
+    if st["premiere"]:
+        zeilen.append(("Uraufführung", st["premiere"]))
+    if not zeilen:
+        return ""
+    return ('<h3 style="margin-top:36px">Mitwirkende</h3><dl class="steckbrief mitwirkende">'
+            + "".join(f"<dt>{e(r)}</dt><dd>{todo(n)}</dd>" for r, n in zeilen) + "</dl>")
+
 def stueck_karten(root, liste=None, css="plays"):
     return f'<div class="{css}">\n' + "\n".join(f'''    <a class="play" href="{root}stuecke/{st["slug"]}.html">
       {bild_oder_platzhalter(st, root)}
       <div class="play-body">
         <div class="tags">{"".join(f'<span class="tag">{e(t)}</span>' for t in st["tags"])}</div>
         <h3>{e(st["titel"])}</h3>
-        <p>{todo(st["kurz"])}</p>
+        <p>{kurz_html(st)}</p>
         <p><b>{todo(st["alter"])}</b> · {todo(st["dauer"])}</p>
       </div>
     </a>''' for st in (stuecke if liste is None else liste)) + "\n  </div>"
@@ -430,6 +460,7 @@ def stueck_seite(st):
       <div class="tags">{"".join(f'<span class="tag">{e(t)}</span>' for t in st["tags"])}</div>
       <h1 style="margin-top:.4em">{e(st["titel"])}</h1>
       <p class="lead">{todo(st["vorlage"])}</p>
+      {zitat_block(st)}
       <p class="lead">{todo(st["kurz"])}</p>
       <div class="btns"><a class="btn" href="{root}veranstalter.html?stueck={st["slug"]}#anfrage">Stück anfragen</a>
       <a class="btn ghost" href="#termine">Öffentliche Termine</a></div>
@@ -465,13 +496,14 @@ def stueck_seite(st):
       <ul class="checklist">{"".join(f"<li>{todo(h)}</li>" for h in st["highlights"])}</ul>
       <h3 style="margin-top:36px">Pädagogischer Wert</h3>
       <ul class="checklist">{"".join(f"<li>{todo(p)}</li>" for p in st["paedagogik"])}</ul>
+      {mitwirkende_html(st)}
     </div>
     <div class="sticky-box">
     <aside class="box">
       <span class="section-label">FÜR VERANSTALTER</span>
       <h3>Dieses Stück buchen</h3>
       <p>Spielbar als: {todo(", ".join(st["formate"]))}</p>
-      <p>Platzbedarf, Technik und Preise findet ihr auf der Veranstalterseite.</p>
+      <p>Platzbedarf und Technik findet ihr auf der Veranstalterseite.</p>
       <div class="btns"><a class="btn" href="{root}veranstalter.html?stueck={st["slug"]}#anfrage">Stück anfragen</a>
       <a class="btn ghost" href="{root}veranstalter.html">Alle Infos</a></div>
     </aside>
@@ -501,7 +533,7 @@ def stueck_seite(st):
   <div class="wrap">
     <span class="section-label">WEITERE STÜCKE</span>
     <span class="eyebrow">Repertoire</span><h2>Das könnte auch gefallen</h2>
-    <div class="plays">{"".join(f'<a class="play" href="{x["slug"]}.html">{bild_oder_platzhalter(x, root)}<div class="play-body"><h3>{e(x["titel"])}</h3><p>{todo(x["kurz"])}</p></div></a>' for x in andere)}</div>
+    <div class="plays">{"".join(f'<a class="play" href="{x["slug"]}.html">{bild_oder_platzhalter(x, root)}<div class="play-body"><h3>{e(x["titel"])}</h3><p>{kurz_html(x)}</p></div></a>' for x in andere)}</div>
   </div>
 </section>'''
     return body, eigene
@@ -559,7 +591,7 @@ def gastspiel_seite(s):
       <span class="eyebrow">Über das Stück</span>
       <h2>{e(st["titel"])}</h2>
       <p class="lead">{todo(st["vorlage"])}</p>
-      <p class="lead">{todo(st["kurz"])}</p>
+      <p class="lead">{kurz_html(st)}</p>
       <ul class="facts" style="margin-top:20px">
         <li><small>Alter</small><b>{todo(st["alter"])}</b></li>
         <li><small>Dauer</small><b>{todo(st["dauer"])}</b></li>
@@ -890,7 +922,7 @@ for st in stuecke:
     vorlage = st["vorlage"].strip()
     # „nach dem Bilderbuch …“ schließt direkt an, ein eigener Satz („Für alle Fans …“) wird abgetrennt
     trenner = " " if vorlage[:1].islower() else ". "
-    desc = re.sub(r"\[[^\]]*\]", "", f'{st["titel"]} – Puppentheater{trenner if vorlage else ""}{vorlage}. {st["kurz"]}').strip()
+    desc = re.sub(r"\[[^\]]*\]", "", f'{st["titel"]} – Puppentheater{trenner if vorlage else ""}{vorlage}. {kurz_text(st)}').strip()
     desc = re.sub(r"\s+\.", ".", desc)
     titelbild = bild_absolut(st["bilder"][0]) if st["bilder"] else None
     schreibe(path, layout(path, f'{st["titel"]} – Puppentheater | {theater}', desc, body, jsonld(*events_jsonld(eigene)), titelbild))
