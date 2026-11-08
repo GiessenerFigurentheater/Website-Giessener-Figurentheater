@@ -12,18 +12,16 @@
   "zuschauer": "bis 300 Zuschauer",
   "spielform": "Klappmaulpuppen, Stabfiguren und Flachfiguren",
   "inhalt": [
-    "Im Herzwald wird ein kleines Einhorn geboren. Alle sind zuckersüß zu ihm – doch das Einhorn hat auf all das keine Lust und sagt einfach: NEIN!",
-    "[Wie geht es in eurer Inszenierung weiter? Wen trifft das NEINhorn, was erleben die Kinder?]"
+    "Im Herzwald, wo alle gli-gla-glücklich sind, kommt ein kleines Einhorn zur Welt. Doch statt sich über gezuckerten Glücksklee zu freuen, sagt es nur eins: NEIN! Und weil ihm das ganze Zuckersüße gehörig auf die Nerven geht, macht sich das NEINhorn kurzerhand auf den Weg nach Nirgends. Unterwegs trifft es den WASbären, der einfach nicht zuhört, den NAhUND, dem alles egal ist, und die KönigsDOCHter, die immer widerspricht. Ob aus so viel Eigensinn am Ende eine echte Freundschaft werden kann?"
   ],
   "highlights": [
     "Eines der beliebtesten Bilderbücher Deutschlands als Puppenspiel",
-    "[Mitmachen: Die Kinder rufen mit „NEIN!“ – stimmt das?]",
-    "[Musik / Lieder?]"
+    "Mittendrin statt nur dabei: Die Figuren sprechen die Kinder immer wieder direkt an und beziehen sie aktiv ins Spiel ein"
   ],
   "paedagogik": [
     "Trotz und Selbstbehauptung: Nein sagen ist erlaubt",
     "Freundschaft trotz Unterschieden",
-    "[weiteres Thema]"
+    "Sprachförderung durch Wortspiele: WASbär, NAhUND und KönigsDOCHter machen Sprache spielerisch erlebbar und laden zum Mitsprechen und Nachdenken über Wörter ein"
   ],
   "varianten": [],
   "formate": [
@@ -36,5 +34,24 @@
       "alt": "Die Figur des NEINhorns sitzt auf der Puppenbühne vor einem handgemalten Wald",
       "text": "Das NEINhorn im Herzwald"
     }
-  ]
+  ],
+  "mitwirkende": [
+    {
+      "rolle": "Spiel",
+      "name": "Ricardo & Patrizia Sperlich"
+    },
+    {
+      "rolle": "Text",
+      "name": "Ricardo Sperlich"
+    },
+    {
+      "rolle": "Figuren",
+      "name": "Norman Schneider"
+    },
+    {
+      "rolle": "Bühnenbild",
+      "name": "Steffen Rogge"
+    }
+  ],
+  "premiere": "30. Juni 2023 in Rostock"
 }

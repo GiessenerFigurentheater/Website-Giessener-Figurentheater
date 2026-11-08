@@ -71,7 +71,7 @@ Nächster Schritt (laut Nutzer): Inhalte & Kurzbeschreibungen der einzelnen Stü
   und Lulu Lavazunge; Vorlage Familie Wutz; Vorlage „Lulu Lavazunge“ bestätigen; Vorlage/Rechte „Peppa feiert Weihnachten“.
   Jede Stückseite hat den Kasten „Presse & Material“ (Feld `presse`) – Dateien fehlen noch.
   Hochkante Fotos: Feld `fokus` (oben/mitte/unten) beim Bild setzen.
-  Furzipups fertig (08.11.2026) bis auf Presse-Downloads.
+  Furzipups und NEINhorn fertig (08.11.2026) bis auf Presse-Downloads; weiter mit Familie Wutz.
 - **Über uns:** Theaterzelt-Details, „Unsere Haltung“ („Was uns ausmacht“ wurde am 07.11.2026 entfernt).
   Zeitleiste 2026 („In diesem Jahr …“) nach dem Jahreswechsel anpassen; Rabe-Socke-Untertitel prüfen.
 - **Spielorte:** Straße & PLZ der Zelt-Standorte Braunschweig und Gießen fehlen.
