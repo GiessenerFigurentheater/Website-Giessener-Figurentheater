@@ -21,10 +21,7 @@ content:
     type: file
     path: inhalte/termine.json
     format: json
-    list:
-      collapsible:
-        collapsed: true
-        summary: "{fields.von} · {fields.titel} · {fields.ort.stadt}"
+    list: true
     fields:
       - name: stueck
         label: Stück
@@ -305,10 +302,7 @@ content:
     type: file
     path: inhalte/galerie.json
     format: json
-    list:
-      collapsible:
-        collapsed: true
-        summary: "{fields.titel}"
+    list: true
     # Neue Fotos oben einfügen – die ersten 5 erscheinen auch auf der Startseite. Zum Löschen den Eintrag entfernen.
     fields:
       - name: bild
@@ -333,10 +327,7 @@ content:
     type: file
     path: inhalte/bewertungen.json
     format: json
-    list:
-      collapsible:
-        collapsed: true
-        summary: "{fields.name} · {fields.datum}"
+    list: true
     fields:
       - name: name
         label: Name (gekürzt)
