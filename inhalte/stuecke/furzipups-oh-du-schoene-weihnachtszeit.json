@@ -2,23 +2,27 @@
   "titel": "Furzipups – oh, du schöne Weihnachtszeit",
   "sichtbar": true,
   "reihenfolge": 7,
-  "vorlage": "nach den Kinderbüchern von Kai Lüftner und Wiebke Rauers",
+  "vorlage": "nach dem Bilderbuch von Kai Lüftner mit Illustrationen von Wiebke Rauers, erschienen im Coppenrath Verlag",
   "tags": [
     "Weihnachtsstück"
   ],
-  "kurz": "Furzipups, der Knatterdrache, feiert Weihnachten – ein weihnachtliches Puppenspiel für die ganze Familie. [Textvorschlag]",
+  "kurz": "Ein turbulentes Weihnachtsabenteuer mit dem kleinen Knatterdrachen.",
   "alter": "ab 2 Jahren",
   "dauer": "ca. 45 Minuten",
   "zuschauer": "bis 300 Zuschauer",
   "spielform": "Stabfiguren und Flachfiguren",
   "inhalt": [
-    "[Inhaltsangabe: Worum geht es? 3–5 Sätze.]"
+    "Weihnachten steht vor der Tür! Furzipups und seine Freunde stecken mitten in den Vorbereitungen und können den Besuch des Weihnachtsdrachen kaum erwarten. Doch plötzlich fällt mit den ersten Schneeflocken ein geheimnisvolles Päckchen vom Himmel. Was mag wohl darin sein?",
+    "Furzipups kann seine Neugier nicht bremsen und entdeckt einen überraschenden Gast: den kleinen, flauschigen Pipi Popo Penguin! Der sorgt schon bald für reichlich Aufregung. Ob bei all dem Trubel noch ein gemütliches Weihnachtsfest möglich ist?",
+    "Das Gießener Figurentheater bringt das Weihnachtsabenteuer mit viel Humor und jeder Menge drachenstarkem Weihnachtszauber auf die Puppenbühne – denn mit Furzipups wird selbst die besinnlichste Zeit des Jahres ganz schön knatterig!"
   ],
   "highlights": [
-    "[Was erwartet die Kinder?]"
+    "Der beliebte Knatterdrache in seinem ersten Weihnachtsabenteuer – als Puppenspiel",
+    "Mittendrin statt nur dabei: Die Figuren sprechen die Kinder immer wieder direkt an und beziehen sie aktiv ins Spiel ein"
   ],
   "paedagogik": [
-    "[Pädagogische Themen]"
+    "Zusammenhalt und Freundschaft: Gemeinsam meistern die Freunde jede Aufregung",
+    "Sprachförderung durch Reime: Die gereimten Erzähltexte aus dem Buch schulen Sprachgefühl, Wortschatz und Lautbewusstsein"
   ],
   "varianten": [],
   "formate": [
@@ -29,6 +33,45 @@
       "src": "/assets/bilder/puppenspiel-furzipups-weihnachten-pinguin.jpg",
       "alt": "Pinguin-Figur mit Kamera in einer weihnachtlichen Szene, dahinter Furzipups",
       "text": "Szene aus „Furzipups – oh, du schöne Weihnachtszeit“"
+    },
+    {
+      "src": "/assets/bilder/furzipups-weihnachten-pinguin-weihnachtskugeln.jpg",
+      "alt": "Die Pinguin-Figur mit pinker Kamera steht neben einem Haufen goldener Weihnachtskugeln vor einer verschneiten Kulisse",
+      "text": "Pipi Popo Penguin"
+    },
+    {
+      "src": "/assets/bilder/furzipups-weihnachten-mammut-und-freund.jpg",
+      "alt": "Das Mammut Rüdiger Rülps-Rüssel und eine kleine Urzeit-Ratte mit Weihnachtsmütze auf der Puppenbühne",
+      "text": "Rüdiger Rülps-Rüssel und eine Urzeit-Ratte"
+    },
+    {
+      "src": "/assets/bilder/furzipups-weihnachten-zipfelmuetze.jpg",
+      "alt": "Nahaufnahme einer Urzeit-Ratte mit langer Nase und roter Weihnachtsmütze",
+      "text": "Eine der Urzeit-Ratten mit Zipfelmütze"
+    },
+    {
+      "src": "/assets/bilder/furzipups-weihnachten-pinguin-geschenk.jpg",
+      "alt": "Der kleine Pinguin mit Kamera schaut aus einem roten Geschenkpaket",
+      "text": "Die Überraschung im Päckchen"
     }
-  ]
+  ],
+  "mitwirkende": [
+    {
+      "rolle": "Spiel",
+      "name": "Ricardo & Patrizia Sperlich"
+    },
+    {
+      "rolle": "Text",
+      "name": "Kai Lüftner (Erzähler) und Ricardo Sperlich (Dialoge)"
+    },
+    {
+      "rolle": "Figuren",
+      "name": "Norman Schneider"
+    },
+    {
+      "rolle": "Bühnenbild",
+      "name": "Swen Richert"
+    }
+  ],
+  "premiere": "22. November 2025 in Gießen"
 }
