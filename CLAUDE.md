@@ -58,8 +58,8 @@ Nächster Schritt (laut Nutzer): Inhalte & Kurzbeschreibungen der einzelnen Stü
   (Recherche 07.11.); später evtl. Anfragen an Stadtmarketing Gießen (Tourismus-Hub Hessen), Kulturamt, Gießener Zeitung.
   Idee „Termin teilen“-Seite (Texte/Bilder je Portal zum Kopieren) vorerst nur im Hinterkopf.
 - **Vor dem Live-Gang erledigen:** Stück-Inhalte · Veranstalter: Downloads (Dateien oder Bereich ausblenden) und
-  Referenzen-Zeile · Logo & alte Fotos von IONOS sichern (OK einholen – sonst fehlen sie nach dem Domain-Umzug) ·
-  Google Fonts selbst hosten · Formular-Dienst für Buchungs- und Mietanfrage · Impressum/Datenschutz prüfen lassen ·
+  Referenzen-Zeile ·
+  (Formular-Dienst Fakturus läuft seit 12.11.: https://formular.fakturus.com/f/website-anfragen, Test-Mail kam an; AVV bei Fakturus anfordern) · Impressum/Datenschutz (Entwurf fertig; USt-IdNr. von Patrizia fehlt noch, AVV Fakturus abwarten, rechtlich prüfen lassen) ·
   Pages CMS verbinden & testen · Entwurfs-Banner entfernen + `VORSCHAU = False` · Domain bei IONOS auf GitHub Pages umstellen.
 
 ## Offene Punkte
@@ -78,8 +78,7 @@ Nächster Schritt (laut Nutzer): Inhalte & Kurzbeschreibungen der einzelnen Stü
   Zeitleiste 2026 („In diesem Jahr …“) nach dem Jahreswechsel anpassen; Rabe-Socke-Untertitel prüfen.
 - **Spielorte:** Straße & PLZ der Zelt-Standorte Braunschweig und Gießen fehlen.
 - **Impressum / Datenschutz:** rechtlich prüfen lassen.
-- **Vor dem Live-Gang:** Logo und ältere Fotos liegen noch auf der alten IONOS-Seite (nur mit OK des Nutzers
-  herunterladen und nach `assets/bilder/` übernehmen); Google Fonts selbst hosten; Formular-Dienst anbinden;
+- **Vor dem Live-Gang:** (Logo & alte IONOS-Fotos am 12.11.2026 nach `assets/bilder/` übernommen; Schrift seit 12.11. selbst gehostet in `assets/fonts/`) 
   gelbes Entwurfs-Banner in `build.py` entfernen; `VORSCHAU = False` in `build.py` setzen (sonst bleibt die Seite für Google gesperrt: noindex + robots.txt Disallow).
 - **Online bringen:** GitHub-Konto & Repository, Upload, Pages auf „GitHub Actions“, Pages CMS verbinden
   (Stück-Auswahl beim Termin und Dateinamen neuer Stücke dabei live prüfen), Domain bei IONOS umstellen.

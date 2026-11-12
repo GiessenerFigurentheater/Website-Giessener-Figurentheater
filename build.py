@@ -25,24 +25,26 @@ THEATER = "Gießener Figurentheater"
 # Vorschau-Phase: Suchmaschinen sollen den Entwurf noch nicht aufnehmen.
 # Beim Live-Gang auf False setzen (dann auch das gelbe Entwurfs-Banner entfernen).
 VORSCHAU = True
+# Formular-Dienst (Fakturus Formular, EU-Server): Adresse des Formulars aus dem Fakturus-Dashboard, z. B. ".../f/abc123".
+# Leer = Anfrage-Formulare öffnen wie bisher das E-Mail-Programm.
+FORMULAR_ADRESSE = "https://formular.fakturus.com/f/website-anfragen"
 TZ = ZoneInfo("Europe/Berlin")
 WOCHENTAGE = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"]
 MONATE = ["Jan.", "Feb.", "März", "Apr.", "Mai", "Juni", "Juli", "Aug.", "Sep.", "Okt.", "Nov.", "Dez."]
 STATUS_SCHEMA = {"geplant": "EventScheduled", "ausverkauft": "EventScheduled",
                  "abgesagt": "EventCancelled", "verschoben": "EventPostponed"}
-LOGO = "https://www.giessener-figurentheater.de/wp-content/uploads/go-x/u/d66c8f17-dea8-45be-9c93-fe2a0e9e79a9/image-911x512.png"
-# Fotos – noch von der bisherigen Website eingebunden. Vor dem Live-Gang in assets/bilder/ kopieren.
-_U = "https://www.giessener-figurentheater.de/wp-content/uploads/go-x/u/"
+LOGO = "assets/bilder/logo-giessener-figurentheater.png"
+# Feste Fotos der Seiten (früher von der alten IONOS-Seite eingebunden, seit 12.11.2026 in assets/bilder/)
 IMG = {
-    "BUEHNE": _U + "6942741a-7786-479d-ba8f-1f519a559c8c/image.jpg",
-    "ZELT": _U + "bb6ee93c-66df-415c-ae78-8c967be70833/image.png",
-    "EKZ": _U + "3aef98a2-b7ec-4cee-9b13-895a16fd0fa8/image.jpg",
-    "KINO": _U + "765767c8-4e21-49e1-b7c9-84cfb40b2a18/image.jpg",
-    "CENTER": _U + "acda0088-1da1-45b0-963c-4ec8ef8f462a/image.jpg",
-    "FIGUREN": _U + "5802d8e0-3438-47ee-a086-4e73d0762b1a/image.jpg",
-    "KASPER": _U + "47fa693e-898e-492e-9aac-e3f74c4a4b39/image.jpg",
-    "WINTER": _U + "222568cd-9b61-44f0-96a1-7e11f1b01c12/image.jpg",
-    "TEAM": _U + "0f459c4c-908e-4898-9363-058062fed039/l29,t0,w837,h923/image-768x847.jpg",
+    "BUEHNE": "assets/bilder/buehne-roter-vorhang.jpg",
+    "ZELT": "assets/bilder/theaterzelt-sonnenuntergang.jpg",
+    "EKZ": "assets/bilder/einkaufscenter-wetzlar.jpg",
+    "KINO": "assets/bilder/gastspiel-kinopolis.jpg",
+    "CENTER": "assets/bilder/puppenbuehne-einkaufszentrum.jpg",
+    "FIGUREN": "assets/bilder/theaterfiguren-gruppe.jpg",
+    "KASPER": "assets/bilder/kasper-handpuppe.jpg",
+    "WINTER": "assets/bilder/winterliches-buehnenbild.jpg",
+    "TEAM": "assets/bilder/patrizia-und-ricardo-sperlich.jpg",
 }
 e = html.escape
 
@@ -263,7 +265,7 @@ def termin_liste(liste, root, compact=False, leer="Aktuell sind keine öffentlic
 
 # ---------- Schema.org ----------
 ORG = {"@type": "PerformingGroup", "@id": f"{site}/#theater", "name": theater, "url": site + "/",
-       "logo": LOGO, "email": "info@giessener-figurentheater.de", "telephone": "+49 160 4625287",
+       "logo": f"{site}/{LOGO}", "email": "info@giessener-figurentheater.de", "telephone": "+49 160 4625287",
        "address": {"@type": "PostalAddress", "streetAddress": "Bachstraße 42", "postalCode": "35435",
                    "addressLocality": "Wettenberg", "addressCountry": "DE"},
        "sameAs": ["https://www.instagram.com/giessenerfigurentheater/", "https://www.facebook.com/figurentheater.giessen/"]}
@@ -271,7 +273,7 @@ ORG = {"@type": "PerformingGroup", "@id": f"{site}/#theater", "name": theater, "
 def bild_absolut(b):
     """Google braucht vollständige Bildadressen; ohne Stückfoto wird das Theaterzelt gezeigt."""
     if not b:
-        return IMG["ZELT"]
+        return f'{site}/{IMG["ZELT"]}'
     return b["src"] if b["src"].startswith("http") else f'{site}/{lokal(b["src"])}'
 
 def events_jsonld(liste):
@@ -704,19 +706,17 @@ def layout(path, title, description, body, ld, bild=None):
 <meta property="og:title" content="{e(title)}">
 <meta property="og:description" content="{e(description)}">
 <meta property="og:type" content="website">
-<meta property="og:image" content="{e(bild or IMG["ZELT"])}">
+<meta property="og:image" content="{e(bild or site + "/" + IMG["ZELT"])}">
 <link rel="alternate" type="text/calendar" title="Termine (iCal)" href="{root}termine.ics">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap">
+<link rel="preload" href="{root}assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{root}assets/style.css?v={VERSION["style.css"]}">
 {ld}
 </head>
-<body>
+<body{f' data-formular="{e(FORMULAR_ADRESSE)}"' if FORMULAR_ADRESSE else ""}>
 <div class="placeholder-banner">Entwurf – <mark class="todo">gelb markiert</mark> = Angabe fehlt noch oder ist ein Textvorschlag.</div>
 <header class="top">
   <div class="wrap nav">
-    <a class="logo" href="{root}index.html"><img src="{LOGO}" alt="{e(theater)}" width="75" height="42"></a>
+    <a class="logo" href="{root}index.html"><img src="{root}{LOGO}" alt="{e(theater)}" width="148" height="46"></a>
     <button class="menu-btn" aria-label="Menü öffnen">☰</button>
     <ul id="menu">
       {nav}
@@ -732,7 +732,7 @@ def layout(path, title, description, body, ld, bild=None):
     <div><b>{e(theater)}</b><br>Patrizia & Ricardo Sperlich<br>Bachstraße 42 · 35435 Wettenberg<br>
       <a href="tel:+491604625287">0160 / 46 25 287</a><br><a href="mailto:info@giessener-figurentheater.de">info@giessener-figurentheater.de</a></div>
     <div><b>Für Familien</b><ul><li><a href="{root}termine.html">Termine</a></li><li><a href="{root}termine.html#tickets">Tickets & Eintritt</a></li><li><a href="{root}termine.ics">Kalender abonnieren</a></li></ul></div>
-    <div><b>Für Veranstalter</b><ul><li><a href="{root}veranstalter.html">Infos & Preise</a></li><li><a href="{root}stuecke/index.html">Repertoire</a></li><li><a href="{root}veranstalter.html#anfrage">Buchungsanfrage</a></li><li><a href="{root}kulturzelt.html">KULTURzelt mieten</a></li></ul></div>
+    <div><b>Für Veranstalter</b><ul><li><a href="{root}veranstalter.html">Infos & Technik</a></li><li><a href="{root}stuecke/index.html">Repertoire</a></li><li><a href="{root}veranstalter.html#anfrage">Buchungsanfrage</a></li><li><a href="{root}kulturzelt.html">KULTURzelt mieten</a></li></ul></div>
     <div><b>Folgt uns</b><ul><li><a href="https://www.instagram.com/giessenerfigurentheater/">Instagram</a></li><li><a href="https://www.facebook.com/figurentheater.giessen/">Facebook</a></li><li><a href="{root}ueber-uns.html">Über uns</a></li><li><a href="{root}galerie.html">Galerie</a></li><li><a href="{root}impressum.html">Impressum</a> · <a href="{root}datenschutz.html">Datenschutz</a></li></ul></div>
   </div>
 </footer>
@@ -745,7 +745,7 @@ def naechster_termin_bild(root):
     """Großes Bild oben auf „Termine & Tickets“: immer das Bild der nächsten Vorstellung (sonst das Theaterzelt)."""
     b = termin_bild(serien[0]) if serien else None
     if not b:
-        return f'<img src="{e(IMG["ZELT"])}" alt="Das Theaterzelt des Gießener Figurentheaters bei Sonnenuntergang">'
+        return f'<img src="{e(root + IMG["ZELT"])}" alt="Das Theaterzelt des Gießener Figurentheaters bei Sonnenuntergang">'
     return f'<img src="{e(bild_src(b, root))}" alt="{e(b["alt"])}"{fokus(b)}>'
 
 def naechster_termin_badge(root):
@@ -857,11 +857,11 @@ def miet_auswahl():
 def content(name, root):
     text = (ROOT / "content" / name).read_text(encoding="utf-8")
     ersetzungen = {
-        **{f"IMG_{k}": v for k, v in IMG.items()},
+        **{f"IMG_{k}": root + v for k, v in IMG.items()},
         "NAECHSTER_TERMIN_BADGE": naechster_termin_badge(root),
         "NAECHSTER_TERMIN_BILD": naechster_termin_bild(root),
         "ROOT": root,
-        "LOGO": LOGO,
+        "LOGO": root + LOGO,
         "NAECHSTE_TERMINE": termin_liste(serien[:3], root, compact=True),
         "ALLE_TERMINE": termin_liste(serien, root),
         "STUECKE_KARTEN": stueck_karten(root),
@@ -887,7 +887,7 @@ SEITEN = [
     ("termine.html", "termine.html", "Termine & Tickets – Gießener Figurentheater",
      "Alle öffentlichen Vorstellungen des Gießener Figurentheaters mit Ort, Uhrzeit und Eintrittspreisen – zum Eintragen in den eigenen Kalender.", serien),
     ("veranstalter.html", "veranstalter.html", "Puppentheater buchen – für Kita, Schule, Stadtfest & Center | Gießener Figurentheater",
-     "Mobiles Puppentheater und Theaterzelt buchen: Repertoire, Platzbedarf, Technik, Preise und Buchungsanfrage für Kitas, Schulen, Kommunen und Veranstalter.", []),
+     "Mobiles Puppentheater und Theaterzelt buchen: Repertoire, Ablauf, Platzbedarf, Technik und Buchungsanfrage für Kitas, Schulen, Kommunen und Veranstalter.", []),
     ("stuecke/index.html", "repertoire.html", "Repertoire – Gießener Figurentheater",
      "Unsere Puppentheaterstücke: " + ", ".join(st["titel"] for st in stuecke) + ".", []),
     ("ueber-uns.html", "ueber-uns.html", "Über uns – Gießener Figurentheater",

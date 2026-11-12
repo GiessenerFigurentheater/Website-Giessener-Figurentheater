@@ -1,3 +1,12 @@
+/* Schrift „Plus Jakarta Sans“ (SIL Open Font License) – liegt selbst auf dem Server, damit beim Laden keine
+   Daten an Google gehen (Datenschutz). Eine Datei enthält alle Stärken 400–800 (variable Schrift). */
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:400 800;font-display:swap;
+  src:url("fonts/plus-jakarta-sans-latin-ext.woff2") format("woff2");
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:400 800;font-display:swap;
+  src:url("fonts/plus-jakarta-sans-latin.woff2") format("woff2");
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
 /* Gießener Figurentheater – Design „Modern & klar“
    Weiß · Tiefblau · Gelb (aus dem Logo) als einziger Akzent. */
 :root{
@@ -617,3 +626,14 @@ form.request fieldset.auswahl .check{font-weight:600;color:var(--ink)}
 .stueck-zitat{margin:18px 0 6px;background:#fff}
 .stueck-zitat cite{display:block;margin-top:8px;font-size:.8rem;font-style:normal;color:var(--muted)}
 .mitwirkende{margin-top:12px}
+
+/* Anfrage-Formulare: Dankeschön nach dem Absenden */
+.danke{background:var(--soft);border-left:4px solid var(--yellow);border-radius:0 16px 16px 0;padding:22px 24px}
+.danke h3{margin:0 0 6px}
+.danke p{margin:0;color:var(--muted)}
+
+/* Impressum & Datenschutz: ruhige Textseite */
+.rechtstext{max-width:760px}
+.rechtstext h2{font-size:1.15rem;margin:32px 0 8px}
+.rechtstext p{color:var(--ink);line-height:1.65}
+.rechtstext .stand{margin-top:32px;font-size:.85rem;color:var(--muted)}

@@ -19,13 +19,41 @@ document.querySelectorAll("form.request").forEach(form => {
     const opt = [...select.options].find(o => o.dataset.slug === wanted);
     if (opt) select.value = opt.value;
   }
-  // Bis ein Formular-Dienst angebunden ist: E-Mail mit allen Angaben vorbereiten
-  form.addEventListener("submit", e => {
-    e.preventDefault();
+  // Absenden: an den Formular-Dienst (Adresse steht in <body data-formular>), sonst E-Mail-Programm öffnen
+  const adresse = document.body.dataset.formular;
+  // Spamschutz (Honeypot): verstecktes Feld, das nur Spam-Programme ausfüllen – Fakturus verwirft solche Anfragen
+  form.insertAdjacentHTML("beforeend", '<input type="text" name="_hp" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">');
+  const zusammenfassung = d => [...d].filter(([k]) => !["Datenschutz", "Betreff", "_hp"].includes(k)).map(([k, v]) => `${k}: ${v}`).join("\n");
+  const betreff = () => (form.dataset.betreff || "Buchungsanfrage") + ": " + (new FormData(form).get("Einrichtung") || "");
+  const perMail = () => {
     const d = new FormData(form);
-    const body = [...d].filter(([k]) => k !== "Datenschutz").map(([k, v]) => `${k}: ${v}`).join("\n");
-    location.href = "mailto:info@giessener-figurentheater.de?subject=" +
-      encodeURIComponent((form.dataset.betreff || "Buchungsanfrage") + ": " + (d.get("Einrichtung") || "")) + "&body=" + encodeURIComponent(body);
+    const body = zusammenfassung(d);
+    location.href = "mailto:info@giessener-figurentheater.de?subject=" + encodeURIComponent(betreff()) + "&body=" + encodeURIComponent(body);
+  };
+  form.addEventListener("submit", async e => {
+    e.preventDefault();
+    if (!adresse) return perMail();
+    const knopf = form.querySelector("[type=submit]");
+    const d = new FormData(form);
+    // Fakturus erwartet die Felder name, email und message – alle Angaben stehen zusätzlich gesammelt in message
+    d.set("Betreff", betreff());
+    d.set("name", d.get("Ansprechperson") || d.get("Einrichtung") || "");
+    d.set("email", d.get("E-Mail") || "");
+    d.set("message", betreff() + "\n\n" + zusammenfassung(new FormData(form)));
+    knopf.disabled = true;
+    knopf.textContent = "Wird gesendet …";
+    try {
+      // Fakturus erlaubt keine Antwort an fremde Seiten (CORS) – „no-cors“ schickt die Anfrage trotzdem zuverlässig ab
+      await fetch(adresse, { method: "POST", body: d, mode: "no-cors" });
+      form.innerHTML = '<div class="danke full"><h3>Vielen Dank für eure Anfrage!</h3>' +
+        '<p>Wir haben eure Nachricht erhalten und melden uns so schnell wie möglich – meist innerhalb von 1–2 Tagen.</p></div>';
+      form.scrollIntoView({ block: "center" });
+    } catch (fehler) {
+      // Klappt das Senden nicht (z. B. keine Verbindung), bleibt der Weg über das E-Mail-Programm
+      knopf.disabled = false;
+      knopf.textContent = "Erneut senden";
+      if (confirm("Die Anfrage konnte gerade nicht gesendet werden. Stattdessen euer E-Mail-Programm mit allen Angaben öffnen?")) perMail();
+    }
   });
 });
 
