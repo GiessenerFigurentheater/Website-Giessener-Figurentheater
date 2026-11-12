@@ -2,31 +2,57 @@
   "titel": "Furzipups und Lulu Lavazunge",
   "sichtbar": true,
   "reihenfolge": 5,
-  "vorlage": "nach den Kinderbüchern von Kai Lüftner und Wiebke Rauers [bitte prüfen]",
+  "vorlage": "nach dem Bilderbuch von Kai Lüftner mit Illustrationen von Wiebke Rauers",
   "tags": [
     "Furzipups"
   ],
-  "kurz": "[Kurzbeschreibung in 1–2 Sätzen]",
+  "kurz": "Furzipups bekommt eine kleine Schwester – und die kann ausgerechnet das, was er nie geschafft hat: Feuer speien!",
   "alter": "ab 2 Jahren",
   "dauer": "ca. 50 Minuten",
   "zuschauer": "bis 300 Zuschauer",
   "spielform": "Stabfiguren",
   "inhalt": [
-    "[Inhaltsangabe: Worum geht es? 3–5 Sätze.]"
+    "Große Aufregung im Drachental: Furzipups wird großer Bruder! Doch die kleine Lulu Lavazunge kann schon gleich nach dem Schlüpfen etwas, wovon Furzipups immer geträumt hat – sie speit Feuer! Alle Drachen sind begeistert, nur Furzipups nicht. Ganz schön ungerecht, findet er, und ein bisschen eifersüchtig ist er auch. Doch dann gerät Lulus Feuer außer Kontrolle, und plötzlich braucht die kleine Schwester ihren großen Bruder. Ob Furzipups ihr helfen kann?"
   ],
   "highlights": [
-    "[Was erwartet die Kinder?]"
+    "Furzipups' neuestes Abenteuer – erstmals live als Puppenspiel",
+    "Mittendrin statt nur dabei: Die Figuren sprechen die Kinder immer wieder direkt an und beziehen sie aktiv ins Spiel ein"
   ],
   "paedagogik": [
-    "[Pädagogische Themen]"
+    "Geschwister und Eifersucht: Gefühle wie Neid ernst nehmen und einen guten Umgang damit finden",
+    "Zusammenhalt: Füreinander da sein, wenn es darauf ankommt",
+    "Sprachförderung durch Reime: Die gereimten Erzähltexte aus dem Buch schulen Sprachgefühl, Wortschatz und Lautbewusstsein"
   ],
   "varianten": [],
-  "formate": [],
+  "formate": [
+    "kleine Bühne",
+    "große Bühne",
+    "im Theaterzelt"
+  ],
   "bilder": [
     {
       "src": "/assets/bilder/lulu-lavazunge.jpg",
       "alt": "Nahaufnahme der roten Drachenfigur Lulu Lavazunge mit großen Augen und langen Wimpern",
       "text": "Lulu Lavazunge"
     }
-  ]
+  ],
+  "mitwirkende": [
+    {
+      "rolle": "Spiel",
+      "name": "Ricardo & Patrizia Sperlich"
+    },
+    {
+      "rolle": "Text",
+      "name": "Kai Lüftner (Erzähler) und Ricardo Sperlich (Dialoge)"
+    },
+    {
+      "rolle": "Figuren",
+      "name": "Norman Schneider"
+    },
+    {
+      "rolle": "Bühnenbild",
+      "name": "Swen Richert"
+    }
+  ],
+  "premiere": "geplant für 2027"
 }

@@ -2,28 +2,32 @@
   "titel": "Familie Wutz",
   "sichtbar": true,
   "reihenfolge": 3,
-  "vorlage": "[Vorlage / Autor:in?]",
+  "vorlage": "Ein grunzig-tolles Puppenspiel für die ganze Familie",
   "tags": [
     "Ab 2 Jahren"
   ],
-  "kurz": "[Kurzbeschreibung in 1–2 Sätzen]",
+  "kurz": "Bei Familie Wutz ist immer etwas los – ein fröhliches Puppenspiel voller Spaß, Lachen und Mitmachen!",
   "alter": "ab 2 Jahren",
   "dauer": "ca. 45 Minuten",
   "zuschauer": "bis 300 Zuschauer",
   "spielform": "Stabfiguren",
   "inhalt": [
-    "[Inhaltsangabe: Worum geht es? 3–5 Sätze.]"
+    "Bei Familie Wutz ist immer etwas los! Ob beim Spielen, Toben oder gemeinsamen Entdecken – die kleine Schweinefamilie hat zusammen jede Menge Spaß und erlebt so manche lustige Überraschung.",
+    "Und das Beste: Die Kinder im Publikum sind immer mittendrin! Sie rufen mit, helfen mit und gestalten das Geschehen auf der Bühne mit. Ein fröhliches Theatererlebnis zum Mitmachen und gemeinsamen Lachen – schon für die Allerkleinsten!"
   ],
   "highlights": [
     "Schon für die Allerkleinsten ab 2 Jahren",
-    "[weitere Highlights]"
+    "Mittendrin statt nur dabei: Die Kinder dürfen mitrufen, mithelfen und das Geschehen mitgestalten"
   ],
   "paedagogik": [
-    "[Themen, z. B. Familie, Alltag, Sprache]"
+    "Familie und Gemeinschaft: Zusammen spielen, lachen und füreinander da sein",
+    "Erste Theatererfahrung: Kurze, fröhliche Szenen, die schon die Kleinsten mühelos mitverfolgen können"
   ],
   "varianten": [],
   "formate": [
-    "Theaterzelt"
+    "kleine Bühne",
+    "große Bühne",
+    "im Theaterzelt"
   ],
   "bilder": [
     {

@@ -6,36 +6,52 @@
   "tags": [
     "Klassiker"
   ],
-  "kurz": "Tri-tra-trullala: Kasper und seine Freunde erleben ein neues Abenteuer – mit viel Mitmachen, Rufen und Lachen.",
+  "kurz": "Tri-tra-trallala: Kasper und seine Freunde erleben ein neues Abenteuer – mit viel Mitmachen, Rufen und Lachen.",
   "alter": "ab 2 Jahren",
   "dauer": "ca. 30–45 Minuten",
   "zuschauer": "bis 300 Zuschauer",
   "spielform": "Handpuppen",
   "inhalt": [
-    "[Inhaltsangabe: Welches Abenteuer erlebt der Kasper? Gibt es mehrere Geschichten zur Auswahl?]"
+    "Tri-tra-trallala – der Kasperle ist wieder da! Gemeinsam mit seinen Freunden erlebt er spannende und lustige Abenteuer: Mal muss er der Großmutter helfen, mal einen frechen Räuber überlisten. Und dabei braucht er ganz dringend die Hilfe der Kinder! Sie warnen, rufen, raten mit und sorgen dafür, dass am Ende alles gut ausgeht.",
+    "Mit dem Kasperletheater hat bei uns alles angefangen: Schon Ricardos Großeltern begeisterten ab 1970 mit dem „Gießener Puppentheater“ Generationen von Kindern. Viele unserer Kasperfiguren stammen noch aus dieser Zeit – und spielen bis heute mit."
   ],
   "highlights": [
     "Das Theater, das schon Generationen begeistert",
     "Viel Mitmachen: Die Kinder warnen, rufen und helfen",
-    "[Kompakter Aufbau – ideal für Kita, Center und Feste?]"
+    "Ideal für Kita, Einkaufszentrum und Feste: kompakte Bühne, schneller Aufbau"
   ],
   "paedagogik": [
     "Gut und Böse unterscheiden, Mut zeigen",
     "Zuhören, Mitdenken, Mitsprechen",
-    "[weiteres Thema]"
+    "Hilfsbereitschaft: Gemeinsam schaffen wir mehr – die Kinder erleben, dass ihre Hilfe zählt"
   ],
   "varianten": [],
   "formate": [
-    "Kita",
-    "Schule",
-    "Einkaufszentrum",
-    "Feste & Events"
+    "kleine Bühne"
   ],
   "bilder": [
     {
       "src": "/assets/bilder/kasper-und-grossmutter.jpg",
       "alt": "Die Handpuppen Kasper und Großmutter auf der Kasperlebühne mit rotem Samtvorhang",
       "text": "Kasper und die Großmutter"
+    }
+  ],
+  "mitwirkende": [
+    {
+      "rolle": "Spiel",
+      "name": "je nach Stück 1 bis 2 Spieler"
+    },
+    {
+      "rolle": "Text",
+      "name": "Ricardo Sperlich"
+    },
+    {
+      "rolle": "Figuren",
+      "name": "Till de Kock"
+    },
+    {
+      "rolle": "Bühnenbild",
+      "name": "verschiedene Künstler"
     }
   ]
 }

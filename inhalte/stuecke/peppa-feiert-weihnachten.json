@@ -2,28 +2,33 @@
   "titel": "Peppa feiert Weihnachten",
   "sichtbar": true,
   "reihenfolge": 8,
-  "vorlage": "Für alle Fans der kultigen Schweinefamilie",
+  "vorlage": "Ein grunzig-tolles, weihnachtliches Puppenspiel",
   "tags": [
     "Weihnachtsstück",
     "Ab 2 Jahren"
   ],
-  "kurz": "Ein weihnachtliches Puppenspiel für Kinder ab 2 Jahren. [Textvorschlag]",
+  "kurz": "Weihnachten mit Peppa und ihrer Familie – das verspricht Vorfreude, lustige Momente und ein fröhliches Fest!",
   "alter": "ab 2 Jahren",
   "dauer": "ca. 45 Minuten",
   "zuschauer": "bis 300 Zuschauer",
   "spielform": "Stabfiguren",
   "inhalt": [
-    "[Inhaltsangabe: Worum geht es? 3–5 Sätze.]"
+    "Weihnachten mit Peppa und ihrer Familie – das verspricht Vorfreude, lustige Momente und ein fröhliches Fest! In unserem Puppenspiel erleben kleine und große Zuschauer den Weihnachtszauber hautnah. Dabei sind die Kinder immer wieder eingeladen, mitzurufen, mitzuhelfen und das Geschehen mitzugestalten.",
+    "Ein weihnachtliches Theatererlebnis zum Mitmachen und gemeinsamen Lachen für die ganze Familie!"
   ],
   "highlights": [
-    "[Was erwartet die Kinder?]"
+    "Peppa und ihre Familie feiern gemeinsam mit euch Weihnachten! Erstmals live als Puppenspiel",
+    "Mittendrin statt nur dabei: Die Kinder dürfen mitrufen, mithelfen und das Geschehen mitgestalten"
   ],
   "paedagogik": [
-    "[Pädagogische Themen]"
+    "Familie und Gemeinschaft: Gemeinsam feiern, teilen und füreinander da sein",
+    "Vorfreude und Rituale: Weihnachtsbräuche kindgerecht erleben"
   ],
   "varianten": [],
   "formate": [
-    "Theaterzelt"
+    "kleine Bühne",
+    "große Bühne",
+    "im Theaterzelt"
   ],
   "bilder": [
     {
@@ -32,5 +37,24 @@
       "text": "Peppa feiert Weihnachten",
       "fokus": "unten"
     }
-  ]
+  ],
+  "mitwirkende": [
+    {
+      "rolle": "Spiel",
+      "name": "Ricardo & Patrizia Sperlich"
+    },
+    {
+      "rolle": "Text",
+      "name": "Ricardo Sperlich"
+    },
+    {
+      "rolle": "Figuren",
+      "name": "Stefanie Czapla"
+    },
+    {
+      "rolle": "Bühnenbild",
+      "name": "Steffen Rogge"
+    }
+  ],
+  "premiere": "20. November 2026 in Gießen"
 }

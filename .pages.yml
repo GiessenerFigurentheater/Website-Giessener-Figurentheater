@@ -297,7 +297,7 @@ content:
         type: select
         options:
           multiple: true
-          values: [Theaterzelt, Große Bühne, Kita, Schule, Einkaufszentrum, Kino, Feste & Events]
+          values: [kleine Bühne, große Bühne, im Theaterzelt]
 
   # ---------------------------------------------------------------- Galerie
   - name: galerie

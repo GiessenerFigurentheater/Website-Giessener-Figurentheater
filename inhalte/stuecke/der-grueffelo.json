@@ -6,22 +6,29 @@
   "tags": [
     "Bilderbuch-Klassiker"
   ],
-  "kurz": "Eine kleine Maus spaziert durch den tiefen, dunklen Wald – und erfindet zum Schutz vor Fuchs, Eule und Schlange ein Ungeheuer: den Grüffelo. Doch was, wenn es ihn wirklich gibt? [Textvorschlag]",
+  "kurz": "Eine kleine Maus spaziert durch den tiefen, dunklen Wald – und erfindet zum Schutz vor Fuchs, Eule und Schlange ein Ungeheuer: den Grüffelo. Doch was, wenn es ihn wirklich gibt?",
   "alter": "ab 2 Jahren",
   "dauer": "ca. 50 Minuten",
   "zuschauer": "bis 300 Zuschauer",
   "spielform": "Stabfiguren",
   "inhalt": [
-    "[Inhaltsangabe: Worum geht es? 3–5 Sätze.]"
+    "Eine kleine Maus spaziert durch den tiefen, dunklen Wald. Dort lauern Fuchs, Eule und Schlange – und alle hätten die Maus nur zu gern zum Fressen gern! Doch die Maus ist schlau: Sie erzählt von einem schrecklichen Ungeheuer mit Klauen, Hauern und einer giftigen Warze auf der Nase, mit dem sie gleich verabredet ist – dem Grüffelo! Dumm nur, dass es so etwas wie einen Grüffelo gar nicht gibt … oder etwa doch?"
   ],
   "highlights": [
-    "[Was erwartet die Kinder?]"
+    "Einer der beliebtesten Bilderbuch-Klassiker der Welt als Puppenspiel",
+    "Mittendrin statt nur dabei: Die Figuren sprechen die Kinder immer wieder direkt an und beziehen sie aktiv ins Spiel ein"
   ],
   "paedagogik": [
-    "[Pädagogische Themen]"
+    "Köpfchen statt Muskeln: Mit Mut und Klugheit kann auch der Kleinste Großes schaffen",
+    "Ängste überwinden: Spielerisch erleben, dass man sich nicht von allem einschüchtern lassen muss",
+    "Sprachförderung durch Reime: Die gereimten Verse aus dem Buch schulen Sprachgefühl, Wortschatz und Lautbewusstsein"
   ],
   "varianten": [],
-  "formate": [],
+  "formate": [
+    "kleine Bühne",
+    "große Bühne",
+    "im Theaterzelt"
+  ],
   "bilder": [
     {
       "src": "/assets/bilder/grueffelo-und-maus.jpg",
@@ -29,5 +36,24 @@
       "text": "Der Grüffelo und die kleine Maus",
       "fokus": "oben"
     }
-  ]
+  ],
+  "mitwirkende": [
+    {
+      "rolle": "Spiel",
+      "name": "Ricardo & Patrizia Sperlich"
+    },
+    {
+      "rolle": "Text",
+      "name": "Ricardo Sperlich"
+    },
+    {
+      "rolle": "Figuren",
+      "name": "Norman Schneider"
+    },
+    {
+      "rolle": "Bühnenbild",
+      "name": "Swen Richert"
+    }
+  ],
+  "premiere": ""
 }
