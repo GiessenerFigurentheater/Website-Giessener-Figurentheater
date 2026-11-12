@@ -3,106 +3,73 @@
 ## So funktioniert es
 
 ```
-Admin-Bereich (Pages CMS)  →  speichert in GitHub  →  GitHub baut die Website  →  online
-     app.pagescms.org          (alle Inhalte)          (1–2 Minuten, + jede Nacht)
+Ricardo sagt Claude im Chat, was sich ändern soll
+   →  Claude ändert die Dateien hier im Ordner und zeigt die Vorschau
+   →  auf „hochladen“ hin: speichert in GitHub
+   →  GitHub baut die Website (1–2 Minuten, zusätzlich jede Nacht)  →  online
 ```
 
-Ihr pflegt alles im Browser – am Computer oder am Handy. Nach dem Speichern ist die Änderung
-nach 1–2 Minuten online. Jede Nacht wird die Website zusätzlich neu gebaut, damit vergangene
-Vorstellungen automatisch verschwinden.
+Jede Nacht wird die Website automatisch neu gebaut – vergangene Vorstellungen verschwinden dadurch
+von selbst, auch wenn niemand etwas ändert.
 
 ---
 
-## Einmalig einrichten
+## Im Alltag (einfach Claude im Chat sagen)
 
-### 1. GitHub-Konto anlegen
-- Auf <https://github.com/signup> ein kostenloses Konto anlegen.
+**Neuer Termin** – z. B.: „Neuer Termin: Der Grüffelo im Theaterzelt Wetzlar, Musterstraße 1, 35578 Wetzlar,
+vom 14. bis 16. März 2027, Freitag 16 Uhr, Samstag und Sonntag 11 und 15 Uhr, Eintritt 9 € / Kinder 7 €.“
+Daraus entstehen automatisch: Terminkarte, Gastspielseite, Google-Daten, Kalender-Einträge.
 
-### 2. Die Website zu GitHub hochladen
-- Auf GitHub ein neues Repository anlegen, z. B. mit dem Namen `website`
-  (Sichtbarkeit: **Public** – für die kostenlose Veröffentlichung nötig; dort liegen nur die Website-Inhalte).
-- Die Dateien aus diesem Ordner hochladen (Claude kann das übernehmen, sobald das Repository existiert).
+**Abgesagt, ausverkauft, verschoben** – „Die Vorstellung am … ist ausverkauft / abgesagt.“
 
-### 3. Automatisches Veröffentlichen einschalten
-- Im Repository: **Settings → Pages → Build and deployment → Source: „GitHub Actions“**.
-- Unter **Actions** erscheint danach „Website veröffentlichen“. Nach ein paar Minuten ist die Seite
-  unter `https://<euer-name>.github.io/website/` erreichbar – zum Testen, bevor die echte Domain umzieht.
+**Neues Stück, neue Fotos, Texte ändern** – Fotos einfach in den Chat ziehen und dazuschreiben, wohin sie sollen.
 
-### 4. Admin-Bereich verbinden
-- <https://app.pagescms.org> öffnen → **Sign in with GitHub**.
-- Der Pages-CMS-App Zugriff auf das Repository `website` erlauben.
-- Repository auswählen – links erscheinen **Termine**, **Repertoire (Stücke)** und **Galerie**.
+**Hochladen** – Claude lädt erst hoch, wenn ihr ausdrücklich „hochladen“ sagt. Bis dahin sind Änderungen nur
+in der Vorschau auf dem Mac zu sehen.
 
-### 5. Eigene Domain umziehen (wenn alles passt)
+---
+
+## Wo liegt was? (falls einmal jemand anderes übernimmt)
+
+Alle Daten liegen **doppelt**: in diesem Ordner auf dem Mac und als vollständige Kopie mit allen früheren
+Versionen bei GitHub (Repository `GiessenerFigurentheater/Website-Giessener-Figurentheater`).
+Jedes andere KI-Werkzeug oder jede Webentwicklerin kann damit weiterarbeiten – die Notiz `CLAUDE.md`
+beschreibt Aufbau, Arbeitsweise und offene Punkte.
+
+| Ordner / Datei            | Inhalt                                                          |
+|---------------------------|-----------------------------------------------------------------|
+| `inhalte/termine.json`    | Spielserien (Ort, Zeitraum, Uhrzeiten, Preise, Status)          |
+| `inhalte/stuecke/*.json`  | Ein Stück pro Datei (Texte, Eckdaten, Bilder, Mitwirkende)      |
+| `inhalte/galerie.json`    | Galerie-Fotos (die ersten 5 auch auf der Startseite)            |
+| `inhalte/kulturzelt.json` | Zelte & Equipment zur Vermietung                                |
+| `inhalte/bewertungen.json`, `inhalte/google.json` | Google-Bewertungen                      |
+| `content/*.html`          | Feste Seitentexte (Startseite, Veranstalter, Impressum …)       |
+| `assets/bilder/`          | Alle Bilder · `assets/fonts/` Schrift · `assets/style.css` Design |
+| `build.py`                | Baut die Website nach `_site/` (Python 3)                       |
+| `.github/workflows/`      | Automatisches Bauen & Veröffentlichen bei GitHub                 |
+
+Lokal ansehen: `python3 build.py`, danach `python3 vorschau.py` und <http://localhost:8765> öffnen.
+
+**Tipp:** Eine Time-Machine-Sicherung des Macs schützt zusätzlich – auch wenn GitHub ohnehin eine Kopie hat.
+
+---
+
+## Zugänge (nur für euch – nicht weitergeben)
+
+- **GitHub:** Konto „GiessenerFigurentheater“. Die Website ist im Repository öffentlich einsehbar, das ist für
+  die kostenlose Veröffentlichung nötig; dort liegen nur Website-Inhalte.
+- **Fakturus Formular:** Formular „website-anfragen“ – Anfragen von der Website kommen per E-Mail an.
+- **IONOS:** Domain giessener-figurentheater.de.
+
+---
+
+## Eigene Domain umziehen (beim Live-Gang, Claude führt durch)
+
 - GitHub: **Settings → Pages → Custom domain**: `www.giessener-figurentheater.de` eintragen,
   danach „Enforce HTTPS“ anhaken.
 - IONOS (Domain-Verwaltung → DNS):
-  - `www` als **CNAME** auf `<euer-name>.github.io`
+  - `www` als **CNAME** auf `giessenerfigurentheater.github.io`
   - die Hauptdomain (`@`) als **A-Einträge** auf
     `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
 - Die Umstellung dauert meist wenige Stunden. Danach kann der IONOS-Baukasten gekündigt werden
   (die Domain selbst bleibt bei IONOS).
-
----
-
-## Im Alltag
-
-### Neuen Termin eintragen
-1. **Termine** öffnen → **Hinzufügen**.
-2. **Stück** auswählen – Bild, Altersangabe und Stückseite werden automatisch verknüpft.
-3. Titel, Kurzbeschreibung, Spielort (mit Straße & PLZ – wichtig für Google), erster und letzter Spieltag.
-4. **Spielzeiten je Wochentag**: z. B. Freitag `16:00`, Sonntag `11:00, 14:00`. Leere Wochentage = keine Vorstellung.
-5. Optional: Tage ohne Vorstellung, Zusatzvorstellungen, eigenes Bild.
-6. Eintrittspreise eintragen → **Speichern**.
-
-Daraus entstehen automatisch: Terminkarte, eigene Gastspielseite, Google-Daten für jede einzelne
-Vorstellung, Kalender-Einträge und der Eintrag im Kalender-Abo.
-
-**Abgesagt oder ausverkauft?** Beim Termin den **Status** ändern – das erscheint auf der Website
-und wird auch an Google gemeldet.
-
-### Neues Stück anlegen
-1. **Repertoire (Stücke)** → **Hinzufügen**.
-2. Titel, Kurzbeschreibung, Alter, Dauer usw. ausfüllen.
-3. **Bilder** hinzufügen – das erste Bild ist das Titelbild. Bitte immer eine kurze Bildbeschreibung
-   eintragen (hilft Google und Menschen mit Sehbehinderung).
-4. **Speichern** → das Stück erscheint im Repertoire, bekommt eine eigene Unterseite und steht
-   im Anfrageformular für Veranstalter zur Auswahl.
-
-Ein Stück vorübergehend ausblenden: Haken bei **„Auf der Website zeigen“** entfernen.
-Reihenfolge im Repertoire: Feld **Reihenfolge** (kleinere Zahl = weiter vorne).
-
-Tipp: Texte in `[eckigen Klammern]` werden auf der Website gelb markiert – praktisch für Notizen,
-was noch fehlt. Vor dem Live-Gang alle eckigen Klammern entfernen.
-
-### Galerie
-- **Galerie** öffnen → **Hinzufügen** → Foto hochladen, Bildunterschrift und Bildbeschreibung eintragen.
-- Neue Fotos nach **oben** ziehen: Die ersten 5 erscheinen auch auf der Startseite.
-- **Foto entfernen:** den Eintrag löschen und speichern. Die Datei selbst kann zusätzlich unter
-  **Media** gelöscht werden.
-- Fotos am besten im Querformat und höchstens ca. 2.000 Pixel breit hochladen.
-  Kleine Versionen fürs Handy werden automatisch erzeugt.
-
-### Etwas schiefgegangen?
-- Jede Änderung wird in GitHub gespeichert und kann dort wiederhergestellt werden.
-- Ob die Website neu gebaut wurde, seht ihr im Repository unter **Actions**
-  (grüner Haken = online, rotes X = Fehler – dann die zuletzt gespeicherte Änderung prüfen).
-
----
-
-## Für Technik-Interessierte
-
-| Ordner / Datei            | Inhalt                                                          |
-|---------------------------|-----------------------------------------------------------------|
-| `inhalte/termine.json`    | Spielserien (wird im Admin-Bereich unter „Termine“ gepflegt)    |
-| `inhalte/stuecke/*.json`  | Ein Stück pro Datei                                             |
-| `inhalte/galerie.json`    | Galerie-Fotos                                                   |
-| `assets/bilder/`          | Hochgeladene Bilder                                             |
-| `content/*.html`          | Feste Seitentexte (Startseite, Veranstalter, Impressum …)       |
-| `assets/style.css`        | Design                                                          |
-| `build.py`                | Baut die Website nach `_site/`                                  |
-| `.pages.yml`              | Formulare des Admin-Bereichs                                    |
-| `.github/workflows/`      | Automatisches Bauen & Veröffentlichen                           |
-
-Lokal ansehen: `python3 build.py`, danach `python3 -m http.server 8765 --directory _site`
-und <http://localhost:8765> öffnen.

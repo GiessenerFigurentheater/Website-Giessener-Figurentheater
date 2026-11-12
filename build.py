@@ -5,10 +5,10 @@
   inhalte/stuecke/*.json   Repertoire → je Stück eine Unterseite stuecke/<datei>.html
   inhalte/termine.json     Öffentliche Spielserien → Terminlisten, Gastspielseiten, Google-Daten, Kalender
   inhalte/galerie.json     Fotos der Galerie
-  assets/                  Stylesheet, Skript und Bilder (Uploads aus dem Admin-Bereich landen in assets/bilder/)
+  assets/                  Stylesheet, Skript, Schrift und Bilder
 
 Die fertige Website entsteht im Ordner _site/. Vergangene Vorstellungen werden automatisch ausgeblendet.
-Inhalte werden im Admin-Bereich (Pages CMS, Einstellungen in .pages.yml) gepflegt; GitHub baut danach
+Inhalte werden mit Claude im Chat gepflegt (JSON-Dateien in inhalte/); GitHub baut danach
 automatisch neu (.github/workflows/website.yml) – zusätzlich jede Nacht.
 Aufruf: python3 build.py
 """
@@ -62,7 +62,7 @@ def stueck_slug(wert):
     return slug(Path(wert or "").stem)
 
 def vervollstaendige(daten, vorlage):
-    """Leere oder fehlende Felder aus dem Admin-Bereich mit Standardwerten füllen, leere Listeneinträge entfernen."""
+    """Leere oder fehlende Felder mit Standardwerten füllen, leere Listeneinträge entfernen."""
     for k, standard in vorlage.items():
         wert = daten.get(k)
         if wert is None:
@@ -115,7 +115,7 @@ now = datetime.now(TZ)
 
 # ---------- Bilder ----------
 def lokal(src):
-    """Bildpfade aus dem Admin-Bereich beginnen mit „/“ – für die Website relativ machen."""
+    """Bildpfade in den Inhalten beginnen mit „/“ – für die Website relativ machen."""
     return src.lstrip("/") if src and not src.startswith("http") else src
 
 def verkleinern(quelle, ziel, breite=1000):

@@ -15,7 +15,6 @@ Sprache der Website und der Kommunikation: Deutsch, Besucher werden mit „ihr�
 | `inhalte/bewertungen.json`, `inhalte/google.json` | Ausgewählte 5-Sterne-Google-Bewertungen + Gesamtbewertung (Startseite & Veranstalter) |
 | `assets/` | `style.css`, `site.js`, `bilder/` (kleine Handy-Versionen erzeugt der Build in `_site/assets/bilder/klein/`), `downloads/` (Pressetext, Pressefotos, Plakat je Stück – Feld `presse` in der Stück-Datei) |
 | `_site/` | Fertige Website (wird bei jedem Build komplett neu erzeugt, nicht von Hand bearbeiten) |
-| `.pages.yml` | Formulare des Admin-Bereichs (Pages CMS) |
 | `.github/workflows/website.yml` | Bauen & Veröffentlichen auf GitHub Pages (bei Push + jede Nacht) |
 | `ANLEITUNG.md` | Anleitung für Patrizia & Ricardo (Einrichtung, Alltag) |
 
@@ -33,7 +32,7 @@ Texte in `[eckigen Klammern]` (JSON) bzw. `<mark class="todo">` (HTML) erscheine
   **Hochladen nur auf Ansage:** Claude pusht erst, wenn der Nutzer ausdrücklich sagt, dass hochgeladen werden soll
   (Wunsch vom 07.11.2026). Änderungen bis dahin nur lokal bauen & in der Vorschau zeigen.
   Technik: GitHub CLI liegt in `~/.local/bin/gh`, angemeldet als GiessenerFigurentheater, Git nutzt es als Anmeldung.
-  Ablauf: vor der Arbeit `git pull` (der Admin-Bereich ändert Dateien direkt auf GitHub); beim Hochladen
+  Ablauf: vor der Arbeit `git pull` (sicherheitshalber); beim Hochladen
   `git add` → `git commit` (deutsche Nachricht) → `git pull --rebase` → `git push`. Nach 1–2 Min. online.
 
 ## Stand (07.11.2026)
@@ -60,7 +59,7 @@ Nächster Schritt (laut Nutzer): Inhalte & Kurzbeschreibungen der einzelnen Stü
 - **Vor dem Live-Gang erledigen:** Stück-Inhalte · Veranstalter: Downloads (Dateien oder Bereich ausblenden) und
   Referenzen-Zeile ·
   (Formular-Dienst Fakturus läuft seit 12.11.: https://formular.fakturus.com/f/website-anfragen, Test-Mail kam an; AVV bei Fakturus anfordern) · Impressum/Datenschutz (Entwurf fertig; USt-IdNr. von Patrizia fehlt noch, AVV Fakturus abwarten, rechtlich prüfen lassen) ·
-  Pages CMS verbinden & testen · Entwurfs-Banner entfernen + `VORSCHAU = False` · Domain bei IONOS auf GitHub Pages umstellen.
+  Entwurfs-Banner entfernen + `VORSCHAU = False` · Domain bei IONOS auf GitHub Pages umstellen.
 
 ## Offene Punkte
 - **Veranstalterseite:** Technik & Platz fertig; Bereich „Preise“ (inkl. Abrechnung/Storno) am 07.11.2026 entfernt.
@@ -80,5 +79,6 @@ Nächster Schritt (laut Nutzer): Inhalte & Kurzbeschreibungen der einzelnen Stü
 - **Impressum / Datenschutz:** rechtlich prüfen lassen.
 - **Vor dem Live-Gang:** (Logo & alte IONOS-Fotos am 12.11.2026 nach `assets/bilder/` übernommen; Schrift seit 12.11. selbst gehostet in `assets/fonts/`) 
   gelbes Entwurfs-Banner in `build.py` entfernen; `VORSCHAU = False` in `build.py` setzen (sonst bleibt die Seite für Google gesperrt: noindex + robots.txt Disallow).
-- **Online bringen:** GitHub-Konto & Repository, Upload, Pages auf „GitHub Actions“, Pages CMS verbinden
-  (Stück-Auswahl beim Termin und Dateinamen neuer Stücke dabei live prüfen), Domain bei IONOS umstellen.
+- **Online bringen:** GitHub & Pages erledigt (06.11.2026); offen: Domain bei IONOS umstellen.
+- **Kein Admin-Bereich (Entscheidung 12.11.2026):** Ricardo pflegt alles über Claude im Chat; Pages CMS wurde entfernt
+  (`.pages.yml` gelöscht). Ricardo soll den Pages-CMS-Zugriff bei GitHub entziehen.
