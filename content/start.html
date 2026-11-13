@@ -28,7 +28,10 @@
     <div class="vorhang-teil links"></div>
     <div class="vorhang-teil rechts"></div>
     <div class="vorhang-blende"></div>
-    <img class="vorhang-logo" src="{{LOGO}}" alt="">
+    <div class="vorhang-mitte">
+      <img class="vorhang-logo" src="{{LOGO}}" alt="">
+      <p class="vorhang-claim"><span>Tradition seit 1970 –</span> <span>mit modernen Konzepten</span></p>
+    </div>
     <span class="vorhang-tipp">Vorhang auf<span>↓</span></span>
   </div>
 </section>
@@ -89,16 +92,7 @@
   </div>
 </section>
 
-<section class="alt" id="bewertungen">
-  <div class="wrap">
-    <div class="head">
-      <div><span class="eyebrow">Referenzen</span><h2>Das sagt unser Publikum</h2></div>
-    </div>
-    {{BEWERTUNGEN}}
-  </div>
-</section>
-
-<section id="ueber-uns">
+<section class="alt" id="ueber-uns">
   <div class="wrap split center">
     <div>
       <span class="eyebrow">Wer wir sind</span>
@@ -111,7 +105,7 @@
   </div>
 </section>
 
-<section class="alt">
+<section id="einblicke">
   <div class="wrap">
     <span class="eyebrow">Einblicke</span>
     <h2>Mit Liebe zum Detail</h2>
@@ -120,7 +114,16 @@
   </div>
 </section>
 
-<section style="padding-top:0">
+<section class="alt" id="bewertungen">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="eyebrow">Referenzen</span><h2>Das sagt unser Publikum</h2></div>
+    </div>
+    {{BEWERTUNGEN}}
+  </div>
+</section>
+
+<section>
   <div class="wrap">
     <div class="cta-band">
       <div><h2>Puppentheater für eure Kita, Schule oder Veranstaltung?</h2><p>Wir beraten euch gern und machen ein passendes Angebot.</p></div>

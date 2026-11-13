@@ -56,14 +56,14 @@ Nächster Schritt (laut Nutzer): Inhalte & Kurzbeschreibungen der einzelnen Stü
   Erster Test: ein kommender Termin auf meinestadt.de. Automatische Schnittstellen gibt es bei diesen Portalen nicht
   (Recherche 07.11.); später evtl. Anfragen an Stadtmarketing Gießen (Tourismus-Hub Hessen), Kulturamt, Gießener Zeitung.
   Idee „Termin teilen“-Seite (Texte/Bilder je Portal zum Kopieren) vorerst nur im Hinterkopf.
-- **Vor dem Live-Gang erledigen:** Stück-Inhalte · Veranstalter: Downloads (Dateien oder Bereich ausblenden) und
-  Referenzen-Zeile ·
+- **Vor dem Live-Gang erledigen:** Stück-Inhalte ·
   (Formular-Dienst Fakturus läuft seit 12.11.: https://formular.fakturus.com/f/website-anfragen, Test-Mail kam an; AVV bei Fakturus anfordern) · Impressum/Datenschutz (Entwurf fertig; USt-IdNr. von Patrizia fehlt noch, AVV Fakturus abwarten, rechtlich prüfen lassen) ·
-  Entwurfs-Banner entfernen + `VORSCHAU = False` · Domain bei IONOS auf GitHub Pages umstellen.
+  `VORSCHAU = False` (Banner + Google-Sperre) zusammen mit Domain-Umzug · Domain bei IONOS auf GitHub Pages umstellen.
 
 ## Offene Punkte
 - **Veranstalterseite:** Technik & Platz fertig; Bereich „Preise“ (inkl. Abrechnung/Storno) am 07.11.2026 entfernt.
-  Offen: weitere Spielorte (u. a. Rerik, Celle ergänzen), Downloads (Dateien fehlen).
+  Referenzen-Liste fertig (12.11.). Download-Bereich als HTML-Kommentar ausgeblendet, bis Dateien da sind (Presse-Kästen auf
+  den Stückseiten bleiben bewusst sichtbar – Ricardo will sie zeitnah füllen).
 - **Stücke (Arbeit läuft, Stück für Stück):** Eckdaten (Alter, Dauer, Zuschauer, Spielform) + Titelfoto fertig bei
   Furzipups, NEINhorn, Familie Wutz, Grüffelo, Lulu Lavazunge. Noch offen: Kasperletheater, beide Weihnachtsstücke
   (Eckdaten; Kasperle & Peppa auch Foto). Bei allen fehlen Inhalt, Highlights, Pädagogik; Kurzbeschreibung bei Familie Wutz
@@ -78,7 +78,7 @@ Nächster Schritt (laut Nutzer): Inhalte & Kurzbeschreibungen der einzelnen Stü
 - **Spielorte:** Straße & PLZ der Zelt-Standorte Braunschweig und Gießen fehlen.
 - **Impressum / Datenschutz:** rechtlich prüfen lassen.
 - **Vor dem Live-Gang:** (Logo & alte IONOS-Fotos am 12.11.2026 nach `assets/bilder/` übernommen; Schrift seit 12.11. selbst gehostet in `assets/fonts/`) 
-  gelbes Entwurfs-Banner in `build.py` entfernen; `VORSCHAU = False` in `build.py` setzen (sonst bleibt die Seite für Google gesperrt: noindex + robots.txt Disallow).
+  `VORSCHAU = False` in `build.py` setzen – schaltet Entwurfs-Banner UND Google-Sperre (noindex, robots.txt) gemeinsam ab; erst zusammen mit dem Domain-Umzug.
 - **Online bringen:** GitHub & Pages erledigt (06.11.2026); offen: Domain bei IONOS umstellen.
 - **Kein Admin-Bereich (Entscheidung 12.11.2026):** Ricardo pflegt alles über Claude im Chat; Pages CMS wurde entfernt
   (`.pages.yml` gelöscht). Ricardo soll den Pages-CMS-Zugriff bei GitHub entziehen.

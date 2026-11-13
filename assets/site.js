@@ -223,3 +223,16 @@ if (buehne && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
   addEventListener("scroll", plane, { passive: true });
   addEventListener("resize", () => { setzeKopf(); plane(); });
 }
+
+// Terminliste („Termine & Tickets“, Stückseiten): Kacheln fliegen beim Scrollen abwechselnd von links und rechts herein
+document.querySelectorAll(".events").forEach(liste => {
+  if (liste.closest(".events-row") || !("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  liste.classList.add("einflug");
+  const beob = new IntersectionObserver(eintraege => {
+    eintraege.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add("sichtbar");
+      else if (e.boundingClientRect.top > 0) e.target.classList.remove("sichtbar"); // beim Zurückscrollen erneut einfliegen
+    });
+  }, { threshold: 0.2 });
+  liste.querySelectorAll(".ev").forEach(k => beob.observe(k));
+});

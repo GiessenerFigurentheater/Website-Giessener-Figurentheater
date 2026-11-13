@@ -22,8 +22,8 @@ ROOT = Path(__file__).parent
 OUT = ROOT / "_site"
 SITE = "https://www.giessener-figurentheater.de"
 THEATER = "Gießener Figurentheater"
-# Vorschau-Phase: Suchmaschinen sollen den Entwurf noch nicht aufnehmen.
-# Beim Live-Gang auf False setzen (dann auch das gelbe Entwurfs-Banner entfernen).
+# Vorschau-Phase: Suchmaschinen sollen den Entwurf noch nicht aufnehmen, oben steht das gelbe Entwurfs-Banner.
+# Beim Live-Gang (zusammen mit dem Domain-Umzug) auf False setzen: Banner weg, Google-Sperre aufgehoben.
 VORSCHAU = True
 # Formular-Dienst (Fakturus Formular, EU-Server): Adresse des Formulars aus dem Fakturus-Dashboard, z. B. ".../f/abc123".
 # Leer = Anfrage-Formulare öffnen wie bisher das E-Mail-Programm.
@@ -713,7 +713,7 @@ def layout(path, title, description, body, ld, bild=None):
 {ld}
 </head>
 <body{f' data-formular="{e(FORMULAR_ADRESSE)}"' if FORMULAR_ADRESSE else ""}>
-<div class="placeholder-banner">Entwurf – <mark class="todo">gelb markiert</mark> = Angabe fehlt noch oder ist ein Textvorschlag.</div>
+{'<div class="placeholder-banner">Entwurf – <mark class="todo">gelb markiert</mark> = Angabe fehlt noch oder ist ein Textvorschlag.</div>' if VORSCHAU else ""}
 <header class="top">
   <div class="wrap nav">
     <a class="logo" href="{root}index.html"><img src="{root}{LOGO}" alt="{e(theater)}" width="148" height="46"></a>
