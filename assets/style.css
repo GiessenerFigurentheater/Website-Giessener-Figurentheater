@@ -649,3 +649,4 @@ main{overflow-x:clip}
 .events.einflug .ev{opacity:0;transform:translateX(-140px) rotate(-1.5deg);transition:opacity .7s ease,transform .9s cubic-bezier(.2,.9,.25,1.15)}
 .events.einflug .ev:nth-child(even){transform:translateX(140px) rotate(1.5deg)}
 .events.einflug .ev.sichtbar{opacity:1;transform:none}
+.preis-hinweis{margin:6px 0 0;font-size:.85rem;color:var(--muted)}

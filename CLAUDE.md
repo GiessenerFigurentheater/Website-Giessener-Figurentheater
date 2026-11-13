@@ -60,6 +60,11 @@ Nächster Schritt (laut Nutzer): Inhalte & Kurzbeschreibungen der einzelnen Stü
   (Formular-Dienst Fakturus läuft seit 12.11.: https://formular.fakturus.com/f/website-anfragen, Test-Mail kam an; AVV bei Fakturus anfordern) · Impressum/Datenschutz (Entwurf fertig; USt-IdNr. von Patrizia fehlt noch, AVV Fakturus abwarten, rechtlich prüfen lassen) ·
   `VORSCHAU = False` (Banner + Google-Sperre) zusammen mit Domain-Umzug · Domain bei IONOS auf GitHub Pages umstellen.
 
+- **Rechts-Check (13.11.2026, Recherche statt Anwalt):** erfüllt: Impressum (bis auf USt-IdNr.), VSBG-Hinweis, keine Cookies,
+  Fonts lokal, Bewertungs-Hinweis § 5b UWG, BFSG-Ausnahme Kleinstunternehmen. Offene Risiken: AVV Fakturus fehlt (Ricardo will
+  die Formulare trotzdem über Fakturus laufen lassen), AVV/Nutzungsbedingungen GitHub Pages (Graubereich), Marke „Peppa“,
+  „inkl. MwSt.“ bei Ticketpreisen, Nutzungsrechte Fotos Oesa, Buchzitat Furzipups.
+
 ## Offene Punkte
 - **Veranstalterseite:** Technik & Platz fertig; Bereich „Preise“ (inkl. Abrechnung/Storno) am 07.11.2026 entfernt.
   Referenzen-Liste fertig (12.11.). Download-Bereich als HTML-Kommentar ausgeblendet, bis Dateien da sind (Presse-Kästen auf

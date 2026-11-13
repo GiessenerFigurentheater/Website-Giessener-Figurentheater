@@ -250,7 +250,7 @@ def termin_karte(s, root, compact=False):
           <div class="ev-key-item">{ICON_KALENDER}<span><small>Wann</small><b>{zeitraum}</b></span></div>
           <div class="ev-key-item">{ICON_ORT}<span><small>Wo</small><b>{e(o["stadt"])}</b><em>{e(ort_zeile)}</em></span></div>
         </div>
-        <p class="ev-meta">{anzahl}{' · <span class="vvk-tag">Vorverkauf</span>' if any(vorverkauf(s)) else ""}{"" if compact else " · Eintritt: " + preise}</p>
+        <p class="ev-meta">{anzahl}{' · <span class="vvk-tag">Vorverkauf</span>' if any(vorverkauf(s)) else ""}{"" if compact else " · Eintritt: " + preise + " (inkl. MwSt.)"}</p>
       </div>
       <div class="ev-actions">
         <a class="btn" href="{root}{gastspiel_url(s)}">Details & Tickets</a>
@@ -575,7 +575,6 @@ def gastspiel_seite(s):
     preise = "".join(f'<li><span>{e(p["name"])}</span> <b>{e(p["preis"])} €</b></li>' for p in s["preise"])
     andere = [x for x in serien if x is not s]
     badge_html = f'<p><span class="ev-badge">{badge}</span></p>' if badge else ""
-    strasse_fehlt = "" if o.get("strasse") else '<p><mark class="todo">Straße & PLZ ergänzen – hilft Google und Navigationsgeräten</mark></p>'
 
     vvk_text, vvk_link = vorverkauf(s)
     vvk_html = ""
@@ -650,6 +649,7 @@ def gastspiel_seite(s):
       <span class="eyebrow">Tickets & Eintritt</span>
       <h2>Eintritt</h2>
       <ul class="checklist">{preise}</ul>
+      <p class="preis-hinweis">Alle Preise inkl. MwSt.</p>
       {vvk_html}
       <p style="margin-top:14px">{"Außerdem gibt es" if any(vorverkauf(s)) else "Tickets gibt es"} {"Tickets " if any(vorverkauf(s)) else ""}30 Minuten vor Beginn an der Kasse – <b>nur Barzahlung</b>, freie Platzwahl. Kinder unter 2 Jahren frei (ohne eigenen Sitzplatz). Bei „B“ oder „H“ im Ausweis ist eine Begleitperson frei.</p>
       <p style="margin-top:10px">Gruppen ab 10 Personen: Plätze reservieren unter <a href="tel:+491604625287">0160 / 46 25 287</a>.</p>
@@ -658,7 +658,6 @@ def gastspiel_seite(s):
       <span class="eyebrow">Spielort</span>
       <h2>{e(o["name"])}</h2>
       <p class="lead">{e(adresse(o))}</p>
-      {strasse_fehlt}
       <div class="btns"><a class="btn" href="{e(maps_link(o))}" target="_blank" rel="noopener">Route planen</a></div>
     </div>
   </div>
