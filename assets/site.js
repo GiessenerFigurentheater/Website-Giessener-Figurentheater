@@ -224,9 +224,9 @@ if (buehne && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
   addEventListener("resize", () => { setzeKopf(); plane(); });
 }
 
-// Terminliste („Termine & Tickets“, Stückseiten): Kacheln fliegen beim Scrollen abwechselnd von links und rechts herein
+// Terminkacheln (Startseite, „Termine & Tickets“, Stückseiten): Kacheln fliegen beim Scrollen abwechselnd von links und rechts herein
 document.querySelectorAll(".events").forEach(liste => {
-  if (liste.closest(".events-row") || !("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  if (!("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   liste.classList.add("einflug");
   const beob = new IntersectionObserver(eintraege => {
     eintraege.forEach(e => {

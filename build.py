@@ -729,7 +729,7 @@ def layout(path, title, description, body, ld, bild=None):
 </main>
 <footer class="site">
   <div class="wrap">
-    <div><b>{e(theater)}</b><br>Patrizia & Ricardo Sperlich<br>Bachstraße 42 · 35435 Wettenberg<br>
+    <div><b>{e(theater)}</b><br>Inhaberin: Patrizia Sperlich<br>Bachstraße 42 · 35435 Wettenberg<br>
       <a href="tel:+491604625287">0160 / 46 25 287</a><br><a href="mailto:info@giessener-figurentheater.de">info@giessener-figurentheater.de</a></div>
     <div><b>Für Familien</b><ul><li><a href="{root}termine.html">Termine</a></li><li><a href="{root}termine.html#tickets">Tickets & Eintritt</a></li><li><a href="{root}termine.ics">Kalender abonnieren</a></li></ul></div>
     <div><b>Für Veranstalter</b><ul><li><a href="{root}veranstalter.html">Infos & Technik</a></li><li><a href="{root}stuecke/index.html">Repertoire</a></li><li><a href="{root}veranstalter.html#anfrage">Buchungsanfrage</a></li><li><a href="{root}kulturzelt.html">KULTURzelt mieten</a></li></ul></div>
