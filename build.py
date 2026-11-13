@@ -881,20 +881,20 @@ def content(name, root):
 
 # ---------- Seiten schreiben ----------
 SEITEN = [
-    ("index.html", "start.html", "Gießener Figurentheater – Puppentheater für Kinder",
-     "Puppentheater für das beste Publikum der Welt: Kinder! Öffentliche Vorstellungen im Theaterzelt sowie Gastspiele in Kitas, Schulen, Stadthallen und auf Events.", []),
-    ("termine.html", "termine.html", "Termine & Tickets – Gießener Figurentheater",
-     "Alle öffentlichen Vorstellungen des Gießener Figurentheaters mit Ort, Uhrzeit und Eintrittspreisen – zum Eintragen in den eigenen Kalender.", serien),
-    ("veranstalter.html", "veranstalter.html", "Puppentheater buchen – für Kita, Schule, Stadtfest & Center | Gießener Figurentheater",
-     "Mobiles Puppentheater und Theaterzelt buchen: Repertoire, Ablauf, Platzbedarf, Technik und Buchungsanfrage für Kitas, Schulen, Kommunen und Veranstalter.", []),
-    ("stuecke/index.html", "repertoire.html", "Repertoire – Gießener Figurentheater",
-     "Unsere Puppentheaterstücke: " + ", ".join(st["titel"] for st in stuecke) + ".", []),
-    ("ueber-uns.html", "ueber-uns.html", "Über uns – Gießener Figurentheater",
-     "Patrizia und Ricardo Sperlich vom Gießener Figurentheater: unsere Geschichte, handgemalte Bühnenbilder, professionelle Figuren und unser Theaterzelt.", []),
-    ("kulturzelt.html", "kulturzelt.html", "KULTURzelt – Zelte & Equipment mieten | Gießener Figurentheater",
-     "Theaterzelte und Veranstaltungs-Equipment mieten: für Stadtfeste, Kulturveranstaltungen, Firmen- und Familienfeiern – mit Bühne, Licht und Ton.", []),
-    ("galerie.html", "galerie.html", "Galerie – Gießener Figurentheater",
-     "Fotos vom Gießener Figurentheater: Figuren, handgemalte Bühnenbilder, Theaterzelt und Gastspiele.", []),
+    ("index.html", "start.html", "Gießener Figurentheater – Puppentheater für Kinder in Gießen & Hessen",
+     "Puppentheater aus Wettenberg bei Gießen: Bilderbuch-Hits wie Grüffelo, NEINhorn und Furzipups – im Theaterzelt, in Kitas, Schulen und auf Events in ganz Hessen.", []),
+    ("termine.html", "termine.html", "Puppentheater Termine & Tickets – Gießener Figurentheater",
+     "Alle öffentlichen Puppentheater-Vorstellungen für Kinder in Gießen und Umgebung: Termine, Spielorte und Eintrittspreise – auch zum Eintragen in den Kalender.", serien),
+    ("veranstalter.html", "veranstalter.html", "Puppentheater buchen für Kita, Schule & Events in Hessen | Gießener Figurentheater",
+     "Mobiles Puppentheater für Kitas, Schulen, Stadtfeste und Einkaufszentren buchen – in Hessen und bundesweit: Stücke ab 2 Jahren, eigene Bühne und Technik.", []),
+    ("stuecke/index.html", "repertoire.html", "Puppentheater-Stücke für Kinder ab 2 – Repertoire | Gießener Figurentheater",
+     "Puppentheaterstücke für Kinder ab 2 Jahren: " + ", ".join(st["titel"] for st in stuecke) + ".", []),
+    ("ueber-uns.html", "ueber-uns.html", "Über uns – Puppenspieler aus Gießen seit 1970 | Gießener Figurentheater",
+     "Patrizia und Ricardo Sperlich: Puppenspieler aus Wettenberg bei Gießen, Familientradition seit 1970 – mit handgemalten Bühnenbildern und professionellen Figuren.", []),
+    ("kulturzelt.html", "kulturzelt.html", "Theaterzelt mieten in Hessen – KULTURzelt | Gießener Figurentheater",
+     "Theaterzelte für bis zu 250 Gäste mieten – in Gießen, Hessen und bundesweit: für Stadtfeste, Kulturreihen, Firmen- und Vereinsfeiern, mit Bestuhlung, Licht und Ton.", []),
+    ("galerie.html", "galerie.html", "Galerie – Fotos aus unserem Puppentheater | Gießener Figurentheater",
+     "Fotos vom Gießener Figurentheater: Theaterfiguren, handgemalte Bühnenbilder, unser Theaterzelt und Gastspiele in ganz Deutschland.", []),
     ("impressum.html", "impressum.html", "Impressum – Gießener Figurentheater", "Impressum des Gießener Figurentheaters.", []),
     ("datenschutz.html", "datenschutz.html", "Datenschutz – Gießener Figurentheater", "Datenschutzerklärung des Gießener Figurentheaters.", []),
 ]
@@ -929,6 +929,37 @@ for st in stuecke:
 for s in serien:
     titel, desc, body, bild = gastspiel_seite(s)
     schreibe(gastspiel_url(s), layout(gastspiel_url(s), titel, desc, body, jsonld(*events_jsonld([s])), bild))
+
+# Weiterleitungen von Adressen der früheren IONOS-Website (Liste aus dem Internet-Archiv, 13.11.2026), damit alte Links
+# und Google-Einträge auf die passende neue Seite führen. GitHub Pages kann keine Server-Weiterleitungen – deshalb je
+# alter Adresse eine kleine Seite mit sofortiger Weiterleitung (meta refresh 0, von Google wie eine 301 behandelt).
+WEITERLEITUNGEN = {
+    "über-uns": "ueber-uns.html", "ueber-uns": "ueber-uns.html",
+    "aktuell": "termine.html", "termine": "termine.html", "wann-and-wo": "termine.html", "tickets": "termine.html#tickets",
+    "repertoire": "stuecke/index.html", "unsere-stücke": "stuecke/index.html", "stuecke-uebersicht": "stuecke/index.html",
+    "das-neinhorn": "stuecke/das-neinhorn.html", "familie-wutz": "stuecke/familie-wutz.html",
+    "kasperle-and-co": "stuecke/kasperletheater.html", "kasperle-and-co-": "stuecke/kasperletheater.html",
+    "furzipups": "stuecke/furzipups.html", "der-grueffelo": "stuecke/der-grueffelo.html",
+    # Stücke, die nicht mehr im Repertoire sind → Repertoire-Übersicht
+    "das-kleine-gespenst": "stuecke/index.html", "der-kleine-rabe-socke": "stuecke/index.html",
+    "pettersson-and-findus": "stuecke/index.html",
+    "repertoire/das-kleine-gespenst": "stuecke/index.html", "repertoire/der-kleine-rabe-socke": "stuecke/index.html",
+    "repertoire/die-kleine-hexe": "stuecke/index.html", "repertoire/rabe-socke-alles-weihnachten": "stuecke/index.html",
+    "unsere-stücke/das-kleine-gespenst": "stuecke/index.html", "unsere-stücke/der-goldschatz-in-der-mühle": "stuecke/index.html",
+    "unsere-stücke/der-verschwundene-weihnachtsbaum": "stuecke/index.html", "unsere-stücke/hänsel-und-gretel": "stuecke/index.html",
+    "kontakt": "veranstalter.html#anfrage", "presse": "veranstalter.html", "veranstalter": "veranstalter.html",
+    "kontakt-impressum": "impressum.html", "impressum": "impressum.html", "datenschutz": "datenschutz.html",
+    "galerie": "galerie.html", "kulturzelt": "kulturzelt.html",
+    "links": "index.html", "sitemap": "index.html",
+}
+for alt, neu in WEITERLEITUNGEN.items():
+    ziel = f"{site}/{'' if neu == 'index.html' else neu}"
+    schreibe(f"{alt}/index.html", f'''<!doctype html><html lang="de"><head><meta charset="utf-8">
+<title>Weiterleitung – {e(theater)}</title><meta name="robots" content="noindex">
+<link rel="canonical" href="{e(ziel)}"><meta http-equiv="refresh" content="0; url={e(ziel)}">
+<script>location.replace({json.dumps(ziel)})</script></head>
+<body><p>Diese Seite ist umgezogen: <a href="{e(ziel)}">{e(ziel)}</a></p></body></html>
+''')
 
 # Sitemap & robots.txt, damit Suchmaschinen alle Seiten finden
 urls = [p for p, *_ in SEITEN] + [f'stuecke/{st["slug"]}.html' for st in stuecke] + [gastspiel_url(s) for s in serien]
