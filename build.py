@@ -24,7 +24,7 @@ SITE = "https://www.giessener-figurentheater.de"
 THEATER = "Gießener Figurentheater"
 # Vorschau-Phase: Suchmaschinen sollen den Entwurf noch nicht aufnehmen, oben steht das gelbe Entwurfs-Banner.
 # Beim Live-Gang (zusammen mit dem Domain-Umzug) auf False setzen: Banner weg, Google-Sperre aufgehoben.
-VORSCHAU = True
+VORSCHAU = False
 # Formular-Dienst (Fakturus Formular, EU-Server): Adresse des Formulars aus dem Fakturus-Dashboard, z. B. ".../f/abc123".
 # Leer = Anfrage-Formulare öffnen wie bisher das E-Mail-Programm.
 FORMULAR_ADRESSE = "https://formular.fakturus.com/f/website-anfragen"

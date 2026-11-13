@@ -84,6 +84,6 @@ Nächster Schritt (laut Nutzer): Inhalte & Kurzbeschreibungen der einzelnen Stü
 - **Impressum / Datenschutz:** rechtlich prüfen lassen.
 - **Vor dem Live-Gang:** (Logo & alte IONOS-Fotos am 12.11.2026 nach `assets/bilder/` übernommen; Schrift seit 12.11. selbst gehostet in `assets/fonts/`) 
   `VORSCHAU = False` in `build.py` setzen – schaltet Entwurfs-Banner UND Google-Sperre (noindex, robots.txt) gemeinsam ab; erst zusammen mit dem Domain-Umzug.
-- **Online bringen:** GitHub & Pages erledigt (06.11.2026); offen: Domain bei IONOS umstellen.
+- **Online bringen:** GitHub & Pages erledigt (06.11.2026); Domain umgestellt am 13.11.2026 (IONOS: 4×A @ → GitHub, CNAME www → giessenerfigurentheater.github.io; Mail-Einträge unverändert), `VORSCHAU = False` – Website ist LIVE unter https://www.giessener-figurentheater.de.
 - **Kein Admin-Bereich (Entscheidung 12.11.2026):** Ricardo pflegt alles über Claude im Chat; Pages CMS wurde entfernt
   (`.pages.yml` gelöscht). Ricardo soll den Pages-CMS-Zugriff bei GitHub entziehen.
