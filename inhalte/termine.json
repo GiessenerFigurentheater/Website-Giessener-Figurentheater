@@ -110,5 +110,109 @@
     ],
     "status": "geplant",
     "bild": ""
+  },
+  {
+    "stueck": "inhalte/stuecke/furzipups-oh-du-schoene-weihnachtszeit.json",
+    "titel": "Furzipups – oh, du schöne Weihnachtszeit",
+    "beschreibung": "Das weihnachtliche Puppenspiel zu den Kinderbüchern von Kai Lüftner und Wiebke Rauers: Furzipups, der Knatterdrache, feiert Weihnachten – live im Theaterzelt an der Bockenheimer Warte in Frankfurt am Main.",
+    "ort": {
+      "name": "Theaterzelt an der Bockenheimer Warte",
+      "strasse": "Carlo-Schmid-Platz 1",
+      "plz": "60325",
+      "stadt": "Frankfurt am Main"
+    },
+    "von": "2026-12-04",
+    "bis": "2027-01-03",
+    "zeiten": {
+      "Mo": "",
+      "Di": "",
+      "Mi": "",
+      "Do": "",
+      "Fr": "",
+      "Sa": "",
+      "So": ""
+    },
+    "ausfall": [],
+    "zusatz": [
+      "2026-12-04T16:00",
+      "2026-12-05T11:00",
+      "2026-12-06T14:00",
+      "2026-12-11T16:00",
+      "2026-12-12T11:00",
+      "2026-12-13T14:00",
+      "2026-12-27T14:00",
+      "2027-01-02T11:00",
+      "2027-01-03T14:00"
+    ],
+    "preise": [
+      {
+        "name": "Erwachsene",
+        "preis": "14,00"
+      },
+      {
+        "name": "Kinder",
+        "preis": "12,00"
+      },
+      {
+        "name": "Menschen mit Beeinträchtigung",
+        "preis": "10,00"
+      }
+    ],
+    "status": "geplant",
+    "bild": ""
+  },
+  {
+    "stueck": "inhalte/stuecke/peppa-feiert-weihnachten.json",
+    "titel": "Peppa feiert Weihnachten",
+    "beschreibung": "Ein weihnachtliches Puppenspiel für Kinder ab 2 Jahren – live im Theaterzelt an der Bockenheimer Warte in Frankfurt am Main.",
+    "ort": {
+      "name": "Theaterzelt an der Bockenheimer Warte",
+      "strasse": "Carlo-Schmid-Platz 1",
+      "plz": "60325",
+      "stadt": "Frankfurt am Main"
+    },
+    "von": "2026-12-05",
+    "bis": "2027-01-03",
+    "zeiten": {
+      "Mo": "",
+      "Di": "",
+      "Mi": "",
+      "Do": "",
+      "Fr": "",
+      "Sa": "",
+      "So": ""
+    },
+    "ausfall": [],
+    "zusatz": [
+      "2026-12-05T14:00",
+      "2026-12-06T11:00",
+      "2026-12-12T14:00",
+      "2026-12-13T11:00",
+      "2026-12-25T16:00",
+      "2026-12-26T16:00",
+      "2026-12-27T11:00",
+      "2026-12-28T16:00",
+      "2026-12-29T16:00",
+      "2026-12-30T16:00",
+      "2027-01-01T16:00",
+      "2027-01-02T14:00",
+      "2027-01-03T11:00"
+    ],
+    "preise": [
+      {
+        "name": "Erwachsene",
+        "preis": "14,00"
+      },
+      {
+        "name": "Kinder",
+        "preis": "12,00"
+      },
+      {
+        "name": "Menschen mit Beeinträchtigung",
+        "preis": "10,00"
+      }
+    ],
+    "status": "geplant",
+    "bild": ""
   }
 ]

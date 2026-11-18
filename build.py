@@ -79,7 +79,7 @@ STUECK_VORLAGE = {"titel": "", "vorlage": "", "kurz": "", "alter": "", "dauer": 
                   "zitat": {"text": "", "quelle": ""}, "mitwirkende": [], "premiere": ""}
 SERIE_VORLAGE = {"titel": "", "beschreibung": "", "ort": {"name": "", "strasse": "", "plz": "", "stadt": ""},
                  "zeiten": {t: "" for t in WOCHENTAGE}, "ausfall": [], "zusatz": [],
-                 "preise": [], "bild": "", "status": "geplant", "vorverkauf": {"text": "", "link": ""}}
+                 "preise": [], "bild": "", "status": "geplant", "vorverkauf": {"text": "", "link": "", "ab": ""}}
 
 stuecke = []
 for datei in sorted((ROOT / "inhalte" / "stuecke").glob("*.json")):
@@ -207,6 +207,11 @@ def vorverkauf(s):
     v = s.get("vorverkauf") or {}
     return (v.get("text") or "").strip(), (v.get("link") or "").strip()
 
+def vorverkauf_ab(s):
+    """Optionaler Vorverkaufsstart (Feld „ab“, JJJJ-MM-TT) als ISO-Datum mit Uhrzeit, sonst leer."""
+    ab = ((s.get("vorverkauf") or {}).get("ab") or "").strip()
+    return f"{ab}T00:00:00+01:00" if re.fullmatch(r"\d{4}-\d{2}-\d{2}", ab) else ""
+
 def gastspiel_url(s):
     """Jede Spielserie hat eine eigene Seite: gastspiele/<stück>-<stadt>-<startdatum>.html"""
     return f'gastspiele/{s["_id"]}.html'
@@ -298,6 +303,8 @@ def events_jsonld(liste):
                 "organizer": {"@id": ORG["@id"]}, "performer": {"@id": ORG["@id"]},
                 "offers": [{"@type": "Offer", "name": p["name"], "price": f'{preis_zahl(p["preis"]):.2f}',
                             "priceCurrency": "EUR", "url": vorverkauf(s)[1] or f"{site}/{gastspiel_url(s)}#tickets",
+                            # Verkaufsbeginn: Vorverkauf ab (falls angegeben), sonst Kassenöffnung 30 Min. vor Beginn
+                            "validFrom": vorverkauf_ab(s) or (start - timedelta(minutes=30)).isoformat(),
                             "availability": "https://schema.org/SoldOut" if s["status"] == "ausverkauft" else "https://schema.org/InStock"}
                            for p in s["preise"]],
             })

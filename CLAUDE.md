@@ -9,7 +9,7 @@ Sprache der Website und der Kommunikation: Deutsch, Besucher werden mit „ihr�
 |---|---|
 | `content/*.html` | Feste Seitentexte (start, termine, veranstalter, repertoire, galerie, ueber-uns, impressum, datenschutz). Platzhalter `{{…}}` füllt `build.py`. |
 | `inhalte/stuecke/*.json` | Ein Stück pro Datei → Karte im Repertoire + Unterseite `stuecke/<datei>.html` |
-| `inhalte/termine.json` | Spielserien (Wochentags-Rhythmus, Ausfälle, Zusatztermine, Preise, optional Bild & Vorverkauf; Spieldauer kommt immer vom Stück, „ca.“ ergänzt der Build automatisch) → Terminkarten, Gastspielseiten `gastspiele/…`, Schema.org-Events, iCal |
+| `inhalte/termine.json` | Spielserien (Wochentags-Rhythmus, Ausfälle, Zusatztermine, Preise, optional Bild & Vorverkauf mit Startdatum „ab“; Spieldauer kommt immer vom Stück, „ca.“ ergänzt der Build automatisch) → Terminkarten, Gastspielseiten `gastspiele/…`, Schema.org-Events, iCal |
 | `inhalte/galerie.json` | Galerie; die ersten 5 Fotos erscheinen auch auf der Startseite |
 | `inhalte/kulturzelt.json` | Zelte (Feld `bilder`: mehrere Fotos = Bildershow zum Durchwischen) & Equipment zur Vermietung → Seite `kulturzelt.html` (mit Mietanfrage-Formular) |
 | `inhalte/bewertungen.json`, `inhalte/google.json` | Ausgewählte 5-Sterne-Google-Bewertungen + Gesamtbewertung (Startseite & Veranstalter) |
