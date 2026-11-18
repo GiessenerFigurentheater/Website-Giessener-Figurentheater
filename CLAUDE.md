@@ -57,7 +57,7 @@ Nächster Schritt (laut Nutzer): Inhalte & Kurzbeschreibungen der einzelnen Stü
   (Recherche 07.11.); später evtl. Anfragen an Stadtmarketing Gießen (Tourismus-Hub Hessen), Kulturamt, Gießener Zeitung.
   Idee „Termin teilen“-Seite (Texte/Bilder je Portal zum Kopieren) vorerst nur im Hinterkopf.
 - **Vor dem Live-Gang erledigen:** Stück-Inhalte ·
-  (Formular-Dienst Fakturus läuft seit 12.11.: https://formular.fakturus.com/f/website-anfragen, Test-Mail kam an; AVV bei Fakturus anfordern) · Impressum/Datenschutz (Entwurf fertig; USt-IdNr. von Patrizia fehlt noch, AVV Fakturus abwarten, rechtlich prüfen lassen) ·
+  (Formular-Dienst Fakturus läuft seit 12.11.: https://formular.fakturus.com/f/website-anfragen; AVV von Fakturus am 16.11.2026 unterschrieben, Datenschutz angepasst) · Impressum/Datenschutz (Entwurf fertig; USt-IdNr. von Patrizia fehlt noch, AVV Fakturus abwarten, rechtlich prüfen lassen) ·
   `VORSCHAU = False` (Banner + Google-Sperre) zusammen mit Domain-Umzug · Domain bei IONOS auf GitHub Pages umstellen.
 
 - **Rechts-Check (13.11.2026, Recherche statt Anwalt):** erfüllt: Impressum (bis auf USt-IdNr.), VSBG-Hinweis, keine Cookies,
