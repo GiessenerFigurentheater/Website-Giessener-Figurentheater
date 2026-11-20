@@ -87,7 +87,7 @@ Nächster Schritt (laut Nutzer): Inhalte & Kurzbeschreibungen der einzelnen Stü
 - **Online bringen:** GitHub & Pages erledigt (06.11.2026); Domain umgestellt am 13.11.2026 (IONOS: 4×A @ → GitHub, CNAME www → giessenerfigurentheater.github.io; Mail-Einträge unverändert), `VORSCHAU = False` – Website ist LIVE unter https://www.giessener-figurentheater.de.
   Google Search Console (Ricardos Google-Konto): Domain-Property bestätigt per TXT-Eintrag bei IONOS (nicht löschen!),
   Sitemap am 13.11.2026 eingereicht – 20 Seiten erkannt. Domain-Connect-Automatik von IONOS NICHT verwenden (wollte MX mx01 löschen).
-- **SEO (13.11.2026):** Weiterleitungen der alten IONOS-Adressen in `build.py` (`WEITERLEITUNGEN`, meta refresh). Seitentitel/
+- **SEO (13.11.2026):** Weiterleitungen der alten IONOS-Adressen in `build.py` (`WEITERLEITUNGEN`, meta refresh). Sitemap-„lastmod“ = letzte Git-Änderung der Quelldateien je Seite (20.11.). Seitentitel/
   Beschreibungen auf „Puppentheater Gießen/Hessen, Kita, Theaterzelt mieten“ ausgerichtet. Ziel Ricardo: Nr. 1 für Puppentheater-
   Suchen in Hessen. Nächste Hebel: Google-Unternehmensprofil, Links von Partnern/Verbänden, evtl. eigene Kita-Seite.
 - **Kein Admin-Bereich (Entscheidung 12.11.2026):** Ricardo pflegt alles über Claude im Chat; Pages CMS wurde entfernt

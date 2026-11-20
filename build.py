@@ -969,11 +969,31 @@ for alt, neu in WEITERLEITUNGEN.items():
 ''')
 
 # Sitemap & robots.txt, damit Suchmaschinen alle Seiten finden
-urls = [p for p, *_ in SEITEN] + [f'stuecke/{st["slug"]}.html' for st in stuecke] + [gastspiel_url(s) for s in serien]
-heute = now.date().isoformat()
+# „lastmod“ = letzte inhaltliche Änderung laut Git (nicht der nächtliche Neubau), damit Google dem Datum vertraut
+def geaendert(*quellen):
+    try:
+        datum = subprocess.run(["git", "log", "-1", "--format=%cs", "--", *quellen], cwd=ROOT,
+                               capture_output=True, text=True, timeout=20).stdout.strip()
+    except (OSError, subprocess.SubprocessError):
+        datum = ""
+    return datum or now.date().isoformat()
+
+SEITEN_QUELLEN = {
+    "index.html": ["inhalte/termine.json", "inhalte/galerie.json", "inhalte/bewertungen.json", "inhalte/google.json", "inhalte/stuecke"],
+    "termine.html": ["inhalte/termine.json"],
+    "veranstalter.html": ["inhalte/bewertungen.json", "inhalte/google.json", "inhalte/stuecke"],
+    "stuecke/index.html": ["inhalte/stuecke"],
+    "kulturzelt.html": ["inhalte/kulturzelt.json"],
+    "galerie.html": ["inhalte/galerie.json"],
+}
+lastmod = {p: geaendert(f"content/{vorlage}", *SEITEN_QUELLEN.get(p, [])) for p, vorlage, *_ in SEITEN}
+for st in stuecke:
+    lastmod[f'stuecke/{st["slug"]}.html'] = geaendert(f'inhalte/stuecke/{st["slug"]}.json')
+for s in serien:
+    lastmod[gastspiel_url(s)] = geaendert("inhalte/termine.json", f'inhalte/stuecke/{s["stueck"]}.json')
 schreibe("sitemap.xml",
     '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-    + "".join(f'  <url><loc>{site}/{"" if u == "index.html" else u}</loc><lastmod>{heute}</lastmod></url>\n' for u in urls)
+    + "".join(f'  <url><loc>{site}/{"" if u == "index.html" else u}</loc><lastmod>{d}</lastmod></url>\n' for u, d in lastmod.items())
     + "</urlset>\n")
 schreibe("robots.txt", "User-agent: *\nDisallow: /\n" if VORSCHAU else f"User-agent: *\nAllow: /\n\nSitemap: {site}/sitemap.xml\n")
 
